@@ -103,7 +103,7 @@ export default function HomePage() {
 
   const renderSection = () => {
     switch (activeTab) {
-      case 'overview': return <Overview />;
+      case 'overview': return <Overview onNavigate={navigateToTab} />;
       case 'runner-guide': return <RunnerIntelligence />;
       case 'spectator-guide': return <SpectatorIntelligence />;
       case 'viewing-routes': return <RoutePlanner />;
@@ -114,7 +114,7 @@ export default function HomePage() {
       case 'food': return <FoodRestaurants filters={filters} />;
       case 'common-mistakes': return <FailureModes />;
       case 'support': return <Support />;
-      default: return <Overview />;
+      default: return <Overview onNavigate={navigateToTab} />;
     }
   };
 

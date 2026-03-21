@@ -107,7 +107,11 @@ const TIPS = [
   },
 ];
 
-export default function Overview() {
+interface Props {
+  onNavigate?: (tabId: string) => void;
+}
+
+export default function Overview({ onNavigate }: Props) {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
@@ -185,6 +189,7 @@ export default function Overview() {
                   style={isHovered ? { borderColor: card.color } : undefined}
                   onMouseEnter={() => setHoveredCard(card.id)}
                   onMouseLeave={() => setHoveredCard(null)}
+                  onClick={() => onNavigate?.(card.id)}
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="p-2.5 rounded-xl" style={{ background: `${card.color}15` }}>

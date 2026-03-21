@@ -11,12 +11,11 @@ import { Bullet } from '@/lib/types';
 import { saveItem, removeItem, isItemSaved } from '@/lib/store';
 
 const SUBSECTIONS = [
-  { id: 'viewing-spots', label: 'Best Viewing Zones', icon: MapPin, desc: 'Cutty Sark, Tower Bridge approach, Canary Wharf, Embankment, The Mall.' },
+  { id: 'best-viewing-zones', label: 'Best Viewing Zones', icon: MapPin, desc: 'Cutty Sark, Tower Bridge approach, Canary Wharf, Embankment, The Mall.' },
   { id: 'trap-zones', label: 'Trap Zones', icon: AlertTriangle, desc: 'Tower Bridge closed to spectators. Wrong-side trap can waste hours.' },
-  { id: 'crowds', label: 'Crowd Hotspots', icon: Users, desc: 'Where crowds peak and where to find space for better viewing.' },
-  { id: 'strategy', label: 'Viewing Strategy', icon: Compass, desc: 'Three-View Rule: maximum 3 spots, commit, and move efficiently.' },
-  { id: 'tracking', label: 'Runner Tracking', icon: Eye, desc: 'TCS tracking app, timing mats at 5km intervals, bib number sharing.' },
-  { id: 'crossing', label: 'Course Crossing', icon: Train, desc: 'Use Tube and DLR -- surface crossings are impossible once the race begins.' },
+  { id: 'crowd-hotspots', label: 'Crowd Hotspots', icon: Users, desc: 'Where crowds peak and where to find space for better viewing.' },
+  { id: 'viewing-strategy', label: 'Viewing Strategy', icon: Compass, desc: 'Three-View Rule: maximum 3 spots, commit, and move efficiently.' },
+  { id: 'three-view-rule', label: 'Three-View Rule', icon: Lightbulb, desc: 'The core spectating principle: 2 spots = comfort, 3 = optimal, 4+ = failure.' },
 ];
 
 const BEST_SPOTS = [
@@ -73,7 +72,7 @@ export default function SpectatorIntelligence() {
   }, []);
 
   const getBulletsForSubsection = (subsectionId: string) => {
-    return spectatorBullets.filter((b: Bullet) => b.subsection === subsectionId);
+    return spectatorBullets.filter((b: Bullet) => b.subsection === subsectionId || b.tags.includes(subsectionId));
   };
 
   const toggleBookmark = (bullet: Bullet) => {

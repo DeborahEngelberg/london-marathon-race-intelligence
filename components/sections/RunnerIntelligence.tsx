@@ -12,14 +12,14 @@ import { Bullet } from '@/lib/types';
 import { saveItem, removeItem, isItemSaved } from '@/lib/store';
 
 const SUBSECTIONS = [
-  { id: 'start-area', label: 'Start Line Logistics', icon: MapPin, desc: 'Three colour-coded starts in Greenwich Park -- Blue, Red, Green' },
-  { id: 'assembly', label: 'Assembly Area Reality', icon: Clock, desc: 'Greenwich Park opens 07:00. Portaloos, charity village, warm-up zones.' },
-  { id: 'security', label: 'Security / Entry', icon: Shield, desc: 'Bag checks, prohibited items, gate closure 30 min before wave start.' },
-  { id: 'toilets', label: 'Toilet Strategy', icon: Bath, desc: 'Go early, go often. Queues grow exponentially after 08:30.' },
-  { id: 'baggage', label: 'Gear / Baggage Buses', icon: Package, desc: 'Official clear bag, labelled with bib number, transported to Horse Guards Parade.' },
-  { id: 'wave-timing', label: 'Start Wave Timing', icon: Timer, desc: 'Mass start at 10:00, elite waves earlier. Know your wave and pen.' },
-  { id: 'nutrition', label: 'Aid Station Behavior', icon: Droplets, desc: 'Water every mile, Lucozade Sport from mile 5, gels at miles 14 and 21.' },
-  { id: 'pacing', label: 'Race Psychology', icon: Brain, desc: 'Greenwich downhill trap, Cutty Sark surge, Tower Bridge lift, The Highway wall, The Mall finish.' },
+  { id: 'start-line-logistics', label: 'Start Line Logistics', icon: MapPin, desc: 'Three colour-coded starts in Greenwich Park -- Blue, Red, Green' },
+  { id: 'athletes-village', label: 'Assembly Area Reality', icon: Clock, desc: 'Greenwich Park opens 07:00. Portaloos, charity village, warm-up zones.' },
+  { id: 'security-entry-chokepoints', label: 'Security / Entry', icon: Shield, desc: 'Bag checks, prohibited items, gate closure 30 min before wave start.' },
+  { id: 'toilet-strategy', label: 'Toilet Strategy', icon: Bath, desc: 'Go early, go often. Queues grow exponentially after 08:30.' },
+  { id: 'gear-discard-warmth', label: 'Gear / Baggage / Kit', icon: Package, desc: 'Official clear bag, disposable layers, anti-chafe, shoes, weather prep.' },
+  { id: 'corral-compression', label: 'Start Pen & Wave Timing', icon: Timer, desc: 'Mass start at 10:00, starts merge at mile 2.8, gates close 30 min before wave.' },
+  { id: 'aid-station-behavior', label: 'Aid Station Behavior', icon: Droplets, desc: 'Water every mile, Lucozade Sport from mile 5, gels at miles 14 and 21.' },
+  { id: 'race-psychology', label: 'Race Psychology & Course Strategy', icon: Brain, desc: 'Greenwich downhill trap, Cutty Sark surge, Tower Bridge lift, The Highway wall, The Mall finish.' },
 ];
 
 const CHECKLIST = [
@@ -47,7 +47,7 @@ export default function RunnerIntelligence() {
   }, []);
 
   const getBulletsForSubsection = (subsectionId: string) => {
-    return runnerBullets.filter((b: Bullet) => b.subsection === subsectionId);
+    return runnerBullets.filter((b: Bullet) => b.subsection === subsectionId || b.tags.includes(subsectionId));
   };
 
   const toggleChecklist = (idx: number) => {
