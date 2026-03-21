@@ -5,8 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/london-marathon-race-intelligence',
-  assetPrefix: '/london-marathon-race-intelligence/',
+  basePath: '',
 };
 
 module.exports = nextConfig;
