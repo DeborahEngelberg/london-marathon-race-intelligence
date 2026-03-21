@@ -1,0 +1,93 @@
+[
+  {
+    "id": "c001",
+    "name": "Tower Bridge",
+    "description": "The course crosses Tower Bridge at miles 12-13. The bridge is completely closed to pedestrians and vehicles during the race. No surface crossing is possible. Use Tower Hill (District/Circle) or London Bridge (Northern/Jubilee) stations to change sides.",
+    "lat": 51.5055,
+    "lng": -0.0754,
+    "crossingType": "bridge-closed",
+    "difficulty": "impossible",
+    "alternativeRoute": "Use Tower Hill or London Bridge Underground stations",
+    "nearestStation": "Tower Hill / London Bridge",
+    "notes": "Iconic course landmark — absolutely no pedestrian access during race hours",
+    "status": "closed"
+  },
+  {
+    "id": "c002",
+    "name": "London Bridge Underground",
+    "description": "London Bridge station provides underground tunnel access between the north and south banks of the Thames. The station connects Northern and Jubilee lines and has multiple exits on both sides of the river approach roads. Useful for crossing from Bermondsey side to Monument/City side.",
+    "lat": 51.5074,
+    "lng": -0.0877,
+    "crossingType": "underground-passage",
+    "difficulty": "easy",
+    "alternativeRoute": "Walk through the station from Borough High Street exit to King William Street exit",
+    "nearestStation": "London Bridge",
+    "notes": "Jubilee and Northern line interchange — busy but passable",
+    "status": "open"
+  },
+  {
+    "id": "c003",
+    "name": "Waterloo Bridge",
+    "description": "Waterloo Bridge is north of the main course route and remains open to pedestrians on race day. It connects the South Bank (Waterloo) with the Strand/Aldwych area. Useful for spectators moving between Embankment viewing spots and South Bank amenities.",
+    "lat": 51.5086,
+    "lng": -0.1168,
+    "crossingType": "bridge-open",
+    "difficulty": "easy",
+    "alternativeRoute": "Walk across — bridge remains open to pedestrians",
+    "nearestStation": "Waterloo / Temple",
+    "notes": "Open throughout race day — good fallback Thames crossing",
+    "status": "open"
+  },
+  {
+    "id": "c004",
+    "name": "Bank/Monument Station Complex",
+    "description": "The Bank-Monument station complex is one of the largest Underground interchanges in London. Its extensive tunnel network connects the Central, Northern, Waterloo & City, District, and Circle lines. Useful for underground course crossing in the City area near miles 22-23.",
+    "lat": 51.5133,
+    "lng": -0.0886,
+    "crossingType": "underground-passage",
+    "difficulty": "moderate",
+    "alternativeRoute": "Enter at any Bank or Monument entrance and exit on the opposite side of the course",
+    "nearestStation": "Bank / Monument",
+    "notes": "Large complex with many exits — check which exits are open on race day",
+    "status": "open"
+  },
+  {
+    "id": "c005",
+    "name": "Canary Wharf Station (Jubilee Line)",
+    "description": "Canary Wharf Jubilee Line station has a large underground shopping mall connecting its entrances. The station underpass allows crossing beneath the marathon course as it loops through the Isle of Dogs (miles 17-19). Enter on one side and exit the other without surfacing onto the course.",
+    "lat": 51.5049,
+    "lng": -0.0183,
+    "crossingType": "underground-passage",
+    "difficulty": "easy",
+    "alternativeRoute": "Use Jubilee Line station underpass via the shopping mall level",
+    "nearestStation": "Canary Wharf",
+    "notes": "Spacious modern station — one of the easier underground crossings",
+    "status": "open"
+  },
+  {
+    "id": "c006",
+    "name": "Blackfriars Station/Bridge",
+    "description": "Blackfriars Bridge remains open to pedestrians on race day and provides a Thames crossing near mile 24 on the Embankment. Blackfriars station (Thameslink, District, Circle) has exits on both the north and south banks. Good option for accessing the Embankment viewing area.",
+    "lat": 51.5121,
+    "lng": -0.1037,
+    "crossingType": "bridge-open",
+    "difficulty": "easy",
+    "alternativeRoute": "Walk across Blackfriars Bridge or use the station's dual-bank exits",
+    "nearestStation": "Blackfriars",
+    "notes": "Dual-sided station is a genuine advantage — exits on both banks of the Thames",
+    "status": "open"
+  },
+  {
+    "id": "c007",
+    "name": "Westminster Bridge",
+    "description": "Westminster Bridge is near the finish area at The Mall and may have restricted access during the race. Pedestrian access is typically maintained but expect heavy crowds and possible closures near the Parliament end. Big Ben and the Houses of Parliament make this area extremely busy.",
+    "lat": 51.5010,
+    "lng": -0.1218,
+    "crossingType": "bridge-restricted",
+    "difficulty": "moderate",
+    "alternativeRoute": "Use Westminster Underground station or Lambeth Bridge as a quieter alternative",
+    "nearestStation": "Westminster",
+    "notes": "Near finish area — expect maximum crowd density and potential temporary closures",
+    "status": "restricted"
+  }
+]

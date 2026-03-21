@@ -1,0 +1,79 @@
+[
+  {
+    "id": "f001",
+    "name": "Wrong-Side Trap at Tower Bridge",
+    "description": "Spectators arrive at Tower Bridge expecting to cross to the other side, only to discover the bridge is completely closed to pedestrians during the race. If your runner is approaching from the south (Bermondsey) side and you are on the north (Tower Hill) side, you will not see them up close. You must choose your side in advance and commit.",
+    "severity": "high",
+    "audience": "spectator",
+    "prevention": "Decide north or south side before race day. South side (Bermondsey/Tooley Street) is less crowded. North side (Tower Hill) has more amenities. Use London Bridge station to access the south side, Tower Hill station for the north.",
+    "recovery": "If stuck on the wrong side, use Tower Hill or London Bridge Underground to cross beneath the river. This takes 15-20 minutes with crowds.",
+    "frequency": "very-common",
+    "tags": ["tower-bridge", "crossing", "positioning"]
+  },
+  {
+    "id": "f002",
+    "name": "Trying to Cross Course Near The Mall",
+    "description": "The finish area around The Mall, Birdcage Walk, and St James's Park is completely locked down with barriers, security, and stewards. Spectators who try to cross from the St James's Park side to the Horse Guards Parade reunion area find themselves walking a 30+ minute detour around the entire perimeter.",
+    "severity": "high",
+    "audience": "spectator",
+    "prevention": "Plan your approach to the reunion area in advance. Horse Guards Parade is accessible from the Whitehall/Trafalgar Square side. Use Charing Cross or Embankment station, not St James's Park station.",
+    "recovery": "Walk north to Trafalgar Square and approach Horse Guards Parade from Whitehall. It is the long way around but the only reliable route.",
+    "frequency": "common",
+    "tags": ["finish-area", "crossing", "reunion", "the-mall"]
+  },
+  {
+    "id": "f003",
+    "name": "Overly Aggressive Spectator Hopping (4+ Spots)",
+    "description": "Attempting to see your runner at more than 3 locations almost always fails. London's marathon course is long and the Tube, while excellent, still requires platform waits, walks between stations, and competing with tens of thousands of other spectators doing the same thing. By your 4th spot, you are exhausted, stressed, and likely missed your runner at spot 3.",
+    "severity": "medium",
+    "audience": "spectator",
+    "prevention": "Apply the Three-View Rule. Pick three spots maximum: one in Greenwich area, one in the middle (Tower Bridge or Canary Wharf), one near the finish (Embankment or Birdcage Walk). Commit to these three and do them well.",
+    "recovery": "If you realise mid-day that you are falling behind, abandon the current move and go directly to your final planned viewing spot. Seeing the finish matters most.",
+    "frequency": "common",
+    "tags": ["spectator-strategy", "three-view-rule", "over-planning"]
+  },
+  {
+    "id": "f004",
+    "name": "Late Arrival to Start Area (Greenwich)",
+    "description": "The assembly area in Greenwich Park is a 15-25 minute walk from the nearest stations (Blackheath, Maze Hill, or Greenwich). Combined with security checks, bag drop queues, and portaloo queues, arriving less than 90 minutes before your wave start creates panic. Some runners have missed their start wave entirely.",
+    "severity": "critical",
+    "audience": "runner",
+    "prevention": "Arrive at Greenwich Park no later than 7:30am for a 10:00am start. If staying outside Greenwich, add 60-90 minutes for transit from central London. Set multiple alarms. Have your race number, timing chip, and bag ready the night before.",
+    "recovery": "If running late, skip the bag drop (wear disposable layers you can discard). Go directly to your colour-coded start pen. Contact marshals if you miss your wave — late starters may be accommodated but with significant time penalty.",
+    "frequency": "common",
+    "tags": ["start", "greenwich", "time-management", "logistics"]
+  },
+  {
+    "id": "f005",
+    "name": "No Reunion Plan → Long Post-Finish Search",
+    "description": "Mobile phone networks are overwhelmed in the finish area. Texts fail, calls drop, and WhatsApp messages queue for 20+ minutes. Without a pre-agreed meeting plan, runners and spectators wander the Horse Guards Parade area for 45-90 minutes trying to find each other, while the runner is cold, exhausted, and increasingly miserable.",
+    "severity": "high",
+    "audience": "both",
+    "prevention": "Before race day, agree on a specific alphabetical letter zone at the reunion point on Horse Guards Parade (e.g., 'Meet at letter M'). Set a time window (e.g., 'I will be at letter M from 2:00-3:30pm'). Write the plan on the runner's arm in marker as a backup.",
+    "recovery": "If separated, go to your pre-agreed letter zone and wait. Do not wander. If no plan exists, try the information point near the reunion area. As a last resort, agree to meet at a specific nearby landmark like the Trafalgar Square lions.",
+    "frequency": "very-common",
+    "tags": ["reunion", "communication", "finish-area", "planning"]
+  },
+  {
+    "id": "f006",
+    "name": "Overreliance on Buses",
+    "description": "Dozens of bus routes across south-east and central London are diverted or cancelled on marathon day. Spectators and runners' families who rely on buses find themselves stranded, with no service running anywhere near the course. This is especially problematic for getting to Greenwich in the morning.",
+    "severity": "high",
+    "audience": "both",
+    "prevention": "Use the Underground (Tube) and DLR exclusively on marathon day. Plan all journeys using Tube/DLR/rail only. Check TfL's marathon day travel page published the week before the race. Buy an Oyster card or use contactless payment — do not queue for paper tickets.",
+    "recovery": "If a bus route is cancelled, open the TfL app or Citymapper and re-route via the nearest Underground station. Most of the course is within 10 minutes walk of a Tube or DLR station.",
+    "frequency": "common",
+    "tags": ["transit", "buses", "disruption", "planning"]
+  },
+  {
+    "id": "f007",
+    "name": "Going Out Too Fast (Greenwich Downhill Trap)",
+    "description": "The first 5km from Greenwich Park is a net downhill with a buzzing crowd lining the route through Charlton and Woolwich. Gravity, adrenaline, and crowd energy combine to pull runners 20-30 seconds per mile faster than planned. This feels effortless at mile 2 but becomes catastrophic at mile 22 on The Highway when legs that went out too fast simply stop working.",
+    "severity": "critical",
+    "audience": "runner",
+    "prevention": "Set your GPS watch to show current pace and check it every kilometre for the first 10km. Target 10-15 seconds per mile SLOWER than goal pace for the first 5km. Let the downhill save energy, not create speed. Run by effort, not by pace, until you reach flat ground.",
+    "recovery": "If you realise by mile 5 that you have gone out too fast, slow down immediately to 15-20 seconds per mile slower than goal pace for miles 5-13. You may be able to partially recover before the Isle of Dogs. Do not try to 'bank time' — it does not work in the marathon.",
+    "frequency": "very-common",
+    "tags": ["pacing", "downhill", "greenwich", "strategy", "wall"]
+  }
+]

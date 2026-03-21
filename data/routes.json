@@ -1,0 +1,188 @@
+[
+  {
+    "id": "r001",
+    "name": "The Greenwich-to-Tower Bridge Classic",
+    "targetPace": "3:30-4:15 marathon",
+    "description": "The quintessential London Marathon spectator route. See your runner at the iconic Cutty Sark early on, then use the DLR and Jubilee Line to reach Tower Bridge approach, and finish at the Embankment for the emotional final miles. Three views, three unforgettable moments.",
+    "estimatedWalkingMinutes": 35,
+    "estimatedTransitMinutes": 40,
+    "difficulty": "moderate",
+    "stops": [
+      {
+        "order": 1,
+        "name": "Cutty Sark (Mile 6)",
+        "description": "Watch runners pass the Cutty Sark ship. Arrive by 9:30am for a good spot. The atmosphere here is electric — the road narrows and the crowd noise funnels around the ship.",
+        "lat": 51.4828,
+        "lng": -0.0112,
+        "station": "Cutty Sark DLR",
+        "arriveBy": "09:30",
+        "leaveBy": "10:45",
+        "raceKm": 10,
+        "viewingNotes": "Best spots on the south side of the ship near the gardens"
+      },
+      {
+        "order": 2,
+        "name": "Tower Bridge South Side (Mile 12-13)",
+        "description": "Take DLR from Cutty Sark to Bank, then walk south to the Tower Bridge approach road on Tooley Street. Watch runners crossing one of the world's most famous bridges.",
+        "lat": 51.5045,
+        "lng": -0.0760,
+        "station": "London Bridge (via DLR to Bank)",
+        "arriveBy": "11:30",
+        "leaveBy": "12:15",
+        "raceKm": 20,
+        "viewingNotes": "Bermondsey/south side less crowded than Tower Hill/north side"
+      },
+      {
+        "order": 3,
+        "name": "Victoria Embankment (Mile 24-25)",
+        "description": "Take Jubilee Line from London Bridge to Embankment. Position yourself along Victoria Embankment between Blackfriars and Westminster. Runners are in their final push — your support means everything here.",
+        "lat": 51.5097,
+        "lng": -0.1145,
+        "station": "Embankment (Jubilee/Bakerloo/Northern/District)",
+        "arriveBy": "13:00",
+        "leaveBy": "End of race",
+        "raceKm": 39,
+        "viewingNotes": "Arrive early — this area fills up and doesn't empty"
+      }
+    ],
+    "transitInstructions": [
+      "Start: Take DLR to Cutty Sark station (2 min walk to viewing spot)",
+      "Move 1: Cutty Sark DLR → Bank station (change to Northern line) → London Bridge (15 min total)",
+      "Move 2: London Bridge → Embankment via Jubilee line to Waterloo + walk, or Northern line direct (12 min)"
+    ],
+    "tags": ["classic", "three-views", "dlr", "jubilee-line"]
+  },
+  {
+    "id": "r002",
+    "name": "The Fast Runner Sprint Route",
+    "targetPace": "Sub-3:00 marathon",
+    "description": "When your runner is fast, you have less time between viewing spots. This route minimises transit time with just two viewing points connected by quick DLR/Jubilee hops. See them at Cutty Sark and then race to the Embankment for the finale.",
+    "estimatedWalkingMinutes": 20,
+    "estimatedTransitMinutes": 30,
+    "difficulty": "hard",
+    "stops": [
+      {
+        "order": 1,
+        "name": "Cutty Sark (Mile 6)",
+        "description": "Your runner will pass here around 38-42 minutes in at sub-3:00 pace. Be in position by 9:15am. You need to leave IMMEDIATELY after seeing them.",
+        "lat": 51.4828,
+        "lng": -0.0112,
+        "station": "Cutty Sark DLR",
+        "arriveBy": "09:15",
+        "leaveBy": "10:25",
+        "raceKm": 10,
+        "viewingNotes": "Position yourself near the DLR station exit for a quick getaway"
+      },
+      {
+        "order": 2,
+        "name": "Victoria Embankment (Mile 24-25)",
+        "description": "Take DLR to Bank → Jubilee to Westminster → walk to Embankment. You have approximately 70-80 minutes to make this journey. Allow extra time for crowds and platform congestion.",
+        "lat": 51.5097,
+        "lng": -0.1145,
+        "station": "Westminster (Jubilee/District/Circle)",
+        "arriveBy": "11:45",
+        "leaveBy": "End of race",
+        "raceKm": 39,
+        "viewingNotes": "Position between Temple and Westminster for best sightlines"
+      }
+    ],
+    "transitInstructions": [
+      "Start: Take DLR to Cutty Sark station",
+      "Move 1: Cutty Sark DLR → Canary Wharf (change to Jubilee) → Westminster (20-25 min total, no delays)"
+    ],
+    "tags": ["fast-runner", "two-views", "minimal-transit", "time-critical"]
+  },
+  {
+    "id": "r003",
+    "name": "The Canary Wharf Loop",
+    "targetPace": "3:30-4:15 marathon",
+    "description": "This route takes advantage of the Isle of Dogs loop where runners pass through Canary Wharf twice (outbound and return). Position yourself where you can see runners heading out and coming back, then hop to the Embankment for the finish. Great for signs and family cheering squads.",
+    "estimatedWalkingMinutes": 25,
+    "estimatedTransitMinutes": 25,
+    "difficulty": "easy",
+    "stops": [
+      {
+        "order": 1,
+        "name": "Cutty Sark (Mile 6)",
+        "description": "Start with the classic Cutty Sark experience. Soak in the atmosphere as thousands of runners stream past the historic ship.",
+        "lat": 51.4828,
+        "lng": -0.0112,
+        "station": "Cutty Sark DLR",
+        "arriveBy": "09:30",
+        "leaveBy": "11:00",
+        "raceKm": 10,
+        "viewingNotes": "Great for group photos with the Cutty Sark as backdrop"
+      },
+      {
+        "order": 2,
+        "name": "Westferry Road, Isle of Dogs (Mile 17-19)",
+        "description": "Position on Westferry Road near Canary Wharf where you can see runners on both the outbound and return legs of the Isle of Dogs loop. Two views for the price of one transit move.",
+        "lat": 51.5005,
+        "lng": -0.0260,
+        "station": "Canary Wharf DLR / Jubilee",
+        "arriveBy": "12:00",
+        "leaveBy": "13:15",
+        "raceKm": 29,
+        "viewingNotes": "Wide roads — easier to spot your runner and hold up signs"
+      },
+      {
+        "order": 3,
+        "name": "Embankment / Birdcage Walk (Mile 25-26)",
+        "description": "Take Jubilee Line from Canary Wharf to Westminster. Walk to the Embankment or along Birdcage Walk for the emotional final mile.",
+        "lat": 51.5017,
+        "lng": -0.1305,
+        "station": "Westminster (Jubilee/District/Circle)",
+        "arriveBy": "14:00",
+        "leaveBy": "End of race",
+        "raceKm": 41,
+        "viewingNotes": "Birdcage Walk is the final straight — emotional and loud"
+      }
+    ],
+    "transitInstructions": [
+      "Start: Take DLR to Cutty Sark station",
+      "Move 1: Cutty Sark DLR → Canary Wharf (8 min)",
+      "Move 2: Canary Wharf Jubilee → Westminster (12 min)"
+    ],
+    "tags": ["canary-wharf", "isle-of-dogs", "double-view", "family-friendly"]
+  },
+  {
+    "id": "r004",
+    "name": "The Minimum Walk Comfort Route",
+    "targetPace": "4:15+ marathon",
+    "description": "For spectators who prefer minimal walking, this route uses just two locations — both directly next to Tube/DLR stations. No rushing, no crowds stress, plenty of time for a coffee between views. Perfect for families with young children or anyone with mobility considerations.",
+    "estimatedWalkingMinutes": 10,
+    "estimatedTransitMinutes": 20,
+    "difficulty": "easy",
+    "stops": [
+      {
+        "order": 1,
+        "name": "Cutty Sark (Mile 6)",
+        "description": "The Cutty Sark viewing area is a 2-minute walk from the DLR station. Plenty of cafes nearby for pre-race coffee. For a 4:15+ runner, they will pass here between 10:45 and 11:15am.",
+        "lat": 51.4828,
+        "lng": -0.0112,
+        "station": "Cutty Sark DLR",
+        "arriveBy": "10:00",
+        "leaveBy": "11:30",
+        "raceKm": 10,
+        "viewingNotes": "Cafes and pubs nearby if you need warmth or facilities"
+      },
+      {
+        "order": 2,
+        "name": "Near Westminster/Embankment (Mile 24-25)",
+        "description": "Take DLR → Jubilee Line to Westminster. The Embankment is a flat, easy walk from the station. Position yourself and wait — your runner will come to you. You have over 2 hours to make this simple journey.",
+        "lat": 51.5074,
+        "lng": -0.1223,
+        "station": "Westminster (Jubilee/District/Circle)",
+        "arriveBy": "13:30",
+        "leaveBy": "End of race",
+        "raceKm": 39,
+        "viewingNotes": "Step-free access available at Westminster station"
+      }
+    ],
+    "transitInstructions": [
+      "Start: Take DLR to Cutty Sark (step-free)",
+      "Move 1: Cutty Sark DLR → Canary Wharf (change to Jubilee) → Westminster (25 min, step-free route available)"
+    ],
+    "tags": ["comfort", "minimal-walking", "accessibility", "family-friendly", "two-views"]
+  }
+]
