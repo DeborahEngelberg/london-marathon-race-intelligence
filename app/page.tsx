@@ -155,7 +155,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Search bar — full width below nav */}
+          {/* Search bar - full width below nav */}
           <div className="pb-2 pt-1">
             <GlobalSearch onNavigate={navigateToTab} />
           </div>

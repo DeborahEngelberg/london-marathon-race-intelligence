@@ -11,7 +11,7 @@
       {
         "order": 1,
         "name": "Cutty Sark (Mile 6)",
-        "description": "Watch runners pass the Cutty Sark ship. Arrive by 9:30am for a good spot. The atmosphere here is electric — the road narrows and the crowd noise funnels around the ship.",
+        "description": "Watch runners pass the Cutty Sark ship. Arrive by 9:30am for a good spot. The atmosphere here is electric - the road narrows and the crowd noise funnels around the ship.",
         "lat": 51.4828,
         "lng": -0.0112,
         "station": "Cutty Sark DLR",
@@ -35,14 +35,14 @@
       {
         "order": 3,
         "name": "Victoria Embankment (Mile 24-25)",
-        "description": "Take Jubilee Line from London Bridge to Embankment. Position yourself along Victoria Embankment between Blackfriars and Westminster. Runners are in their final push — your support means everything here.",
+        "description": "Take Jubilee Line from London Bridge to Embankment. Position yourself along Victoria Embankment between Blackfriars and Westminster. Runners are in their final push - your support means everything here.",
         "lat": 51.5097,
         "lng": -0.1145,
         "station": "Embankment (Jubilee/Bakerloo/Northern/District)",
         "arriveBy": "13:00",
         "leaveBy": "End of race",
         "raceKm": 39,
-        "viewingNotes": "Arrive early — this area fills up and doesn't empty"
+        "viewingNotes": "Arrive early - this area fills up and doesn't empty"
       }
     ],
     "transitInstructions": [
@@ -123,7 +123,7 @@
         "arriveBy": "12:00",
         "leaveBy": "13:15",
         "raceKm": 29,
-        "viewingNotes": "Wide roads — easier to spot your runner and hold up signs"
+        "viewingNotes": "Wide roads - easier to spot your runner and hold up signs"
       },
       {
         "order": 3,
@@ -135,7 +135,7 @@
         "arriveBy": "14:00",
         "leaveBy": "End of race",
         "raceKm": 41,
-        "viewingNotes": "Birdcage Walk is the final straight — emotional and loud"
+        "viewingNotes": "Birdcage Walk is the final straight - emotional and loud"
       }
     ],
     "transitInstructions": [
@@ -149,7 +149,7 @@
     "id": "r004",
     "name": "The Minimum Walk Comfort Route",
     "targetPace": "4:15+ marathon",
-    "description": "For spectators who prefer minimal walking, this route uses just two locations — both directly next to Tube/DLR stations. No rushing, no crowds stress, plenty of time for a coffee between views. Perfect for families with young children or anyone with mobility considerations.",
+    "description": "For spectators who prefer minimal walking, this route uses just two locations - both directly next to Tube/DLR stations. No rushing, no crowds stress, plenty of time for a coffee between views. Perfect for families with young children or anyone with mobility considerations.",
     "estimatedWalkingMinutes": 10,
     "estimatedTransitMinutes": 20,
     "difficulty": "easy",
@@ -169,7 +169,7 @@
       {
         "order": 2,
         "name": "Near Westminster/Embankment (Mile 24-25)",
-        "description": "Take DLR → Jubilee Line to Westminster. The Embankment is a flat, easy walk from the station. Position yourself and wait — your runner will come to you. You have over 2 hours to make this simple journey.",
+        "description": "Take DLR → Jubilee Line to Westminster. The Embankment is a flat, easy walk from the station. Position yourself and wait - your runner will come to you. You have over 2 hours to make this simple journey.",
         "lat": 51.5074,
         "lng": -0.1223,
         "station": "Westminster (Jubilee/District/Circle)",

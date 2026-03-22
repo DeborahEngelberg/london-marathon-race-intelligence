@@ -35,7 +35,7 @@ const ESSENTIALS = [
 export default function Overview({ onNavigate }: Props) {
   return (
     <div>
-      {/* Hero — confident, typographic, no decoration */}
+      {/* Hero  - confident, typographic, no decoration */}
       <div className="pt-6 sm:pt-12 pb-10 sm:pb-14 mb-8 border-b border-[var(--border)]">
         <div className="hero-stagger-1">
           <p className="text-xs font-medium text-[var(--accent)] tracking-wide uppercase mb-4">
@@ -70,7 +70,7 @@ export default function Overview({ onNavigate }: Props) {
         </div>
       </div>
 
-      {/* Essentials — the 6 things everyone needs to know */}
+      {/* Essentials  - the 6 things everyone needs to know */}
       <AnimateIn className="mb-12">
         <h2 className="text-lg font-bold text-[var(--text)] mb-4">Before you read anything else</h2>
         <div className="space-y-3">
@@ -86,7 +86,7 @@ export default function Overview({ onNavigate }: Props) {
         </div>
       </AnimateIn>
 
-      {/* Sections — clean list, not a card grid */}
+      {/* Sections  - clean list, not a card grid */}
       <AnimateIn className="mb-12" delay={80}>
         <h2 className="text-lg font-bold text-[var(--text)] mb-4">Full guide</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">

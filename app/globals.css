@@ -56,7 +56,7 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
-/* ── Badges — minimal, functional ── */
+/* ── Badges - minimal, functional ── */
 .badge {
   @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
   letter-spacing: 0.01em;
@@ -72,14 +72,14 @@ body {
 .badge-conflict { @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 border border-red-300 dark:border-red-700; }
 .badge-gap { @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400 border border-orange-300 dark:border-orange-700; }
 
-/* ── Cards — clean, no hover effects ── */
+/* ── Cards - clean, no hover effects ── */
 .card {
   @apply rounded-lg border;
   background: var(--bg-card);
   border-color: var(--border);
 }
 
-/* ── Tool cards — subtle highlight, no gold ── */
+/* ── Tool cards - subtle highlight, no gold ── */
 .tool-card {
   @apply rounded-lg border;
   background: var(--bg-card);
@@ -94,19 +94,19 @@ body {
 
 .leaflet-container { height: 100%; width: 100%; border-radius: 0.5rem; }
 
-/* ── Subtle accent line — static, no animation ── */
+/* ── Subtle accent line - static, no animation ── */
 .london-stripe {
   height: 2px;
   background: var(--accent);
 }
 
-/* ── Section divider — just spacing ── */
+/* ── Section divider - just spacing ── */
 .section-divider {
   height: 1px;
   background: var(--border);
 }
 
-/* ── Entrance animations — subtle, one-shot ── */
+/* ── Entrance animations - subtle, one-shot ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }

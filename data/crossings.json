@@ -9,7 +9,7 @@
     "difficulty": "impossible",
     "alternativeRoute": "Use Tower Hill or London Bridge Underground stations",
     "nearestStation": "Tower Hill / London Bridge",
-    "notes": "Iconic course landmark — absolutely no pedestrian access during race hours",
+    "notes": "Iconic course landmark - absolutely no pedestrian access during race hours",
     "status": "closed"
   },
   {
@@ -22,7 +22,7 @@
     "difficulty": "easy",
     "alternativeRoute": "Walk through the station from Borough High Street exit to King William Street exit",
     "nearestStation": "London Bridge",
-    "notes": "Jubilee and Northern line interchange — busy but passable",
+    "notes": "Jubilee and Northern line interchange - busy but passable",
     "status": "open"
   },
   {
@@ -33,9 +33,9 @@
     "lng": -0.1168,
     "crossingType": "bridge-open",
     "difficulty": "easy",
-    "alternativeRoute": "Walk across — bridge remains open to pedestrians",
+    "alternativeRoute": "Walk across - bridge remains open to pedestrians",
     "nearestStation": "Waterloo / Temple",
-    "notes": "Open throughout race day — good fallback Thames crossing",
+    "notes": "Open throughout race day - good fallback Thames crossing",
     "status": "open"
   },
   {
@@ -48,7 +48,7 @@
     "difficulty": "moderate",
     "alternativeRoute": "Enter at any Bank or Monument entrance and exit on the opposite side of the course",
     "nearestStation": "Bank / Monument",
-    "notes": "Large complex with many exits — check which exits are open on race day",
+    "notes": "Large complex with many exits - check which exits are open on race day",
     "status": "open"
   },
   {
@@ -61,7 +61,7 @@
     "difficulty": "easy",
     "alternativeRoute": "Use Jubilee Line station underpass via the shopping mall level",
     "nearestStation": "Canary Wharf",
-    "notes": "Spacious modern station — one of the easier underground crossings",
+    "notes": "Spacious modern station - one of the easier underground crossings",
     "status": "open"
   },
   {
@@ -74,7 +74,7 @@
     "difficulty": "easy",
     "alternativeRoute": "Walk across Blackfriars Bridge or use the station's dual-bank exits",
     "nearestStation": "Blackfriars",
-    "notes": "Dual-sided station is a genuine advantage — exits on both banks of the Thames",
+    "notes": "Dual-sided station is a genuine advantage - exits on both banks of the Thames",
     "status": "open"
   },
   {
@@ -87,7 +87,7 @@
     "difficulty": "moderate",
     "alternativeRoute": "Use Westminster Underground station or Lambeth Bridge as a quieter alternative",
     "nearestStation": "Westminster",
-    "notes": "Near finish area — expect maximum crowd density and potential temporary closures",
+    "notes": "Near finish area - expect maximum crowd density and potential temporary closures",
     "status": "restricted"
   }
 ]

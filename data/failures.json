@@ -39,7 +39,7 @@
     "severity": "critical",
     "audience": "runner",
     "prevention": "Arrive at Greenwich Park no later than 7:30am for a 10:00am start. If staying outside Greenwich, add 60-90 minutes for transit from central London. Set multiple alarms. Have your race number, timing chip, and bag ready the night before.",
-    "recovery": "If running late, skip the bag drop (wear disposable layers you can discard). Go directly to your colour-coded start pen. Contact marshals if you miss your wave — late starters may be accommodated but with significant time penalty.",
+    "recovery": "If running late, skip the bag drop (wear disposable layers you can discard). Go directly to your colour-coded start pen. Contact marshals if you miss your wave - late starters may be accommodated but with significant time penalty.",
     "frequency": "common",
     "tags": ["start", "greenwich", "time-management", "logistics"]
   },
@@ -60,7 +60,7 @@
     "description": "Dozens of bus routes across south-east and central London are diverted or cancelled on marathon day. Spectators and runners' families who rely on buses find themselves stranded, with no service running anywhere near the course. This is especially problematic for getting to Greenwich in the morning.",
     "severity": "high",
     "audience": "both",
-    "prevention": "Use the Underground (Tube) and DLR exclusively on marathon day. Plan all journeys using Tube/DLR/rail only. Check TfL's marathon day travel page published the week before the race. Buy an Oyster card or use contactless payment — do not queue for paper tickets.",
+    "prevention": "Use the Underground (Tube) and DLR exclusively on marathon day. Plan all journeys using Tube/DLR/rail only. Check TfL's marathon day travel page published the week before the race. Buy an Oyster card or use contactless payment - do not queue for paper tickets.",
     "recovery": "If a bus route is cancelled, open the TfL app or Citymapper and re-route via the nearest Underground station. Most of the course is within 10 minutes walk of a Tube or DLR station.",
     "frequency": "common",
     "tags": ["transit", "buses", "disruption", "planning"]
@@ -72,7 +72,7 @@
     "severity": "critical",
     "audience": "runner",
     "prevention": "Set your GPS watch to show current pace and check it every kilometre for the first 10km. Target 10-15 seconds per mile SLOWER than goal pace for the first 5km. Let the downhill save energy, not create speed. Run by effort, not by pace, until you reach flat ground.",
-    "recovery": "If you realise by mile 5 that you have gone out too fast, slow down immediately to 15-20 seconds per mile slower than goal pace for miles 5-13. You may be able to partially recover before the Isle of Dogs. Do not try to 'bank time' — it does not work in the marathon.",
+    "recovery": "If you realise by mile 5 that you have gone out too fast, slow down immediately to 15-20 seconds per mile slower than goal pace for miles 5-13. You may be able to partially recover before the Isle of Dogs. Do not try to 'bank time' - it does not work in the marathon.",
     "frequency": "very-common",
     "tags": ["pacing", "downhill", "greenwich", "strategy", "wall"]
   }

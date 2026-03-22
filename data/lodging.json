@@ -6,7 +6,7 @@
     "frictionScore": "Low",
     "finishScore": "Low",
     "mobilityScore": "Med",
-    "quietRisk": "Low — residential area, away from central London noise",
+    "quietRisk": "Low - residential area, away from central London noise",
     "avoidWarning": "Excellent for runners (near start), but far from the finish at The Mall. Spectators will need 45+ min transit to reach finish.",
     "citations": [
       { "sourceName": "TCS London Marathon Info", "sourceUrl": "https://www.tcslondonmarathon.com" }
@@ -19,7 +19,7 @@
     "frictionScore": "Med",
     "finishScore": "Med",
     "mobilityScore": "High",
-    "quietRisk": "Med — busy area, weekend nightlife on Bermondsey Street",
+    "quietRisk": "Med - busy area, weekend nightlife on Bermondsey Street",
     "avoidWarning": "Course passes nearby at Tower Bridge (mile 12/23). Excellent transit hub. Borough Market nearby for food.",
     "citations": [
       { "sourceName": "TCS London Marathon Spectator Guide", "sourceUrl": "https://www.tcslondonmarathon.com" }
@@ -32,7 +32,7 @@
     "frictionScore": "Med",
     "finishScore": "Med",
     "mobilityScore": "High",
-    "quietRisk": "Low — business district, quiet on weekends",
+    "quietRisk": "Low - business district, quiet on weekends",
     "avoidWarning": "Course loops through Canary Wharf (mile 17-20). Good viewing from hotel. Jubilee line direct to Westminster for finish.",
     "citations": [
       { "sourceName": "TCS London Marathon Course Map", "sourceUrl": "https://www.tcslondonmarathon.com" }
@@ -45,7 +45,7 @@
     "frictionScore": "High",
     "finishScore": "High",
     "mobilityScore": "High",
-    "quietRisk": "High — finish area noise until 18:00+, road closures affect hotel access",
+    "quietRisk": "High - finish area noise until 18:00+, road closures affect hotel access",
     "avoidWarning": "Road closures around The Mall may require detours. Confirm with hotel which entrance is accessible on race day.",
     "citations": [
       { "sourceName": "TCS London Marathon Spectator Guide", "sourceUrl": "https://www.tcslondonmarathon.com" }
@@ -58,7 +58,7 @@
     "frictionScore": "Med",
     "finishScore": "Med",
     "mobilityScore": "High",
-    "quietRisk": "Low — quieter than expected, good mix of hotels",
+    "quietRisk": "Low - quieter than expected, good mix of hotels",
     "avoidWarning": "Course passes along The Highway (mile 13/22). Multiple viewing opportunities without traveling far.",
     "citations": [
       { "sourceName": "TCS London Marathon Info", "sourceUrl": "https://www.tcslondonmarathon.com" }
@@ -71,7 +71,7 @@
     "frictionScore": "Med",
     "finishScore": "High",
     "mobilityScore": "High",
-    "quietRisk": "Med — South Bank entertainment area can be noisy",
+    "quietRisk": "Med - South Bank entertainment area can be noisy",
     "avoidWarning": "Walk across Westminster Bridge to reach finish area. Excellent transit hub at Waterloo.",
     "citations": [
       { "sourceName": "TfL Marathon Information", "sourceUrl": "https://tfl.gov.uk" }
