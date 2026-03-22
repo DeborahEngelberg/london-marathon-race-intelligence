@@ -86,26 +86,28 @@ export default function RunnerIntelligence() {
       {/* Race Morning Checklist */}
       <AnimateIn>
         <div className="tool-card p-6 mb-8">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-2">
             <CheckCircle2 size={18} style={{ color: 'var(--accent-gold)' }} />
             <h2 className="text-lg font-bold">Race Morning Checklist</h2>
-            <span className="badge badge-time ml-auto">Interactive</span>
           </div>
-          <div className="space-y-2">
+          <p className="text-xs text-[var(--text-muted)] mb-4">Tap each item to check it off as you go.</p>
+          <div className="space-y-1.5">
             {checklist.map((item, idx) => (
               <button
                 key={idx}
-                className={`timeline-step w-full flex items-center gap-3 p-3 rounded-lg text-left transition-colors ${
-                  item.done ? 'bg-green-50 dark:bg-green-900/20' : 'hover:bg-[var(--bg-elevated)]'
+                className={`timeline-step w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left border transition-all cursor-pointer ${
+                  item.done
+                    ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800'
+                    : 'bg-[var(--bg-card)] border-[var(--border)] hover:border-sky-300 dark:hover:border-sky-700 hover:bg-sky-50 dark:hover:bg-sky-900/10'
                 }`}
                 onClick={() => toggleChecklist(idx)}
               >
                 {item.done ? (
-                  <CheckCircle2 size={18} className="text-green-500 flex-shrink-0" />
+                  <CheckCircle2 size={18} className="text-emerald-500 flex-shrink-0" />
                 ) : (
-                  <Circle size={18} className="text-[var(--text-muted)] flex-shrink-0" />
+                  <div className="w-[18px] h-[18px] rounded-full border-2 border-[var(--border)] flex-shrink-0" />
                 )}
-                <span className="text-xs font-mono font-semibold text-[var(--accent)] w-24 flex-shrink-0">
+                <span className={`text-xs font-mono font-semibold w-24 flex-shrink-0 ${item.done ? 'text-emerald-600 dark:text-emerald-400' : 'text-sky-600 dark:text-sky-400'}`}>
                   {item.time}
                 </span>
                 <span className={`text-sm ${item.done ? 'line-through text-[var(--text-muted)]' : 'text-[var(--text)]'}`}>
@@ -115,7 +117,7 @@ export default function RunnerIntelligence() {
             ))}
           </div>
           <p className="text-xs text-[var(--text-muted)] mt-4">
-            Times are approximate and based on a 10:00 mass start. Elite waves start earlier. Check your official start time.
+            Based on a 10:00 mass start. Elite waves start earlier. Check your official start time.
           </p>
         </div>
       </AnimateIn>
