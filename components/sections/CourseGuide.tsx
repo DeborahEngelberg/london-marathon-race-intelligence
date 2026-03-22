@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { MapPin, ChevronDown, ChevronUp, AlertTriangle, Zap, Wind, Users } from 'lucide-react';
+import { MapPin, ChevronDown, ChevronUp, AlertTriangle, Zap, Wind, Users, Info } from 'lucide-react';
 import AnimateIn from '@/components/ui/AnimateIn';
 
 const ELEVATION_DATA = [
@@ -283,7 +283,6 @@ function ElevationChart() {
       <div className="flex items-end gap-[2px] sm:gap-1" style={{ height: chartHeight }}>
         {ELEVATION_DATA.map((point, i) => {
           const height = (point.meters / maxElevation) * chartHeight;
-          const isHighRisk = [0, 1, 2, 12, 17, 20, 21, 22].includes(i);
           const isLandmark = [6, 12, 17, 20, 25].includes(i);
 
           return (
@@ -294,8 +293,8 @@ function ElevationChart() {
             >
               <div
                 className={`absolute bottom-0 w-full rounded-t-sm transition-colors ${
-                  isHighRisk ? 'bg-[var(--accent)]' : isLandmark ? 'bg-[var(--text-secondary)]' : 'bg-[var(--border)]'
-                } group-hover:bg-[var(--accent)]`}
+                  isLandmark ? 'bg-sky-400 dark:bg-sky-500' : 'bg-sky-200 dark:bg-sky-800'
+                } group-hover:bg-sky-500 dark:group-hover:bg-sky-400`}
                 style={{ height: `${height}px` }}
               />
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] text-[var(--text-muted)] opacity-0 group-hover:opacity-100 whitespace-nowrap pointer-events-none font-mono">
@@ -320,16 +319,12 @@ function ElevationChart() {
       {/* Legend */}
       <div className="flex items-center gap-4 mt-3 text-[10px] text-[var(--text-muted)]">
         <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-sm bg-[var(--accent)]" />
-          <span>Key risk zones</span>
+          <div className="w-2 h-2 rounded-sm bg-sky-400" />
+          <span>Key landmarks</span>
         </div>
         <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-sm bg-[var(--text-secondary)]" />
-          <span>Landmarks</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-sm bg-[var(--border)]" />
-          <span>Standard</span>
+          <div className="w-2 h-2 rounded-sm bg-sky-200 dark:bg-sky-800" />
+          <span>Elevation</span>
         </div>
         <span className="ml-auto font-mono">Total gain: ~40m</span>
       </div>
@@ -344,12 +339,12 @@ export default function CourseGuide() {
     <div>
       {/* Header */}
       <div className="mb-6">
-        <p className="text-xs font-medium text-[var(--accent)] tracking-wide uppercase mb-1">Course Analysis</p>
+        <p className="text-xs font-medium text-[var(--text-muted)] tracking-wide uppercase mb-1">Course Guide</p>
         <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-[var(--text)] mb-2">
-          Mile-by-mile guide
+          Your mile-by-mile companion
         </h1>
         <p className="text-sm text-[var(--text-secondary)]">
-          What to expect at every stage of the London Marathon, from the Greenwich downhill to The Mall finish.
+          Know exactly what's coming at every stage, from Greenwich Park all the way to The Mall. You've got this.
         </p>
       </div>
 
@@ -359,7 +354,7 @@ export default function CourseGuide() {
           <h2 className="text-sm font-semibold text-[var(--text)] mb-4">Elevation profile</h2>
           <ElevationChart />
           <p className="text-xs text-[var(--text-muted)] mt-3">
-            Hover over bars for exact elevation. Red = risk zones. The course drops 30m in the first 3 miles, then is essentially flat with minor undulations.
+            Hover over bars for exact elevation. The course drops 30m in the first 3 miles, then is essentially flat with gentle undulations. One of the fastest major marathon courses in the world.
           </p>
         </div>
       </AnimateIn>
@@ -368,21 +363,21 @@ export default function CourseGuide() {
       <AnimateIn delay={40}>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
           {[
-            { mile: '1–3', label: 'Greenwich Downhill', icon: AlertTriangle, desc: 'Biggest pacing trap' },
-            { mile: '6', label: 'Cutty Sark', icon: Users, desc: 'Loudest crowd' },
-            { mile: '12', label: 'Tower Bridge', icon: MapPin, desc: 'Halfway landmark' },
-            { mile: '21–22', label: 'The Highway', icon: Wind, desc: 'The mental wall' },
+            { mile: '1-3', label: 'Greenwich Downhill', icon: Zap, desc: 'Stay controlled, save energy', color: 'text-amber-500' },
+            { mile: '6', label: 'Cutty Sark', icon: Users, desc: 'Best atmosphere on course', color: 'text-emerald-500' },
+            { mile: '12', label: 'Tower Bridge', icon: MapPin, desc: 'Iconic halfway moment', color: 'text-sky-500' },
+            { mile: '21-22', label: 'The Highway', icon: Wind, desc: 'Dig deep, crowds return soon', color: 'text-violet-500' },
           ].map((moment, i) => {
             const Icon = moment.icon;
             return (
               <button
                 key={i}
-                onClick={() => setExpandedMile(moment.mile === '1–3' ? 1 : moment.mile === '21–22' ? 21 : Number(moment.mile))}
-                className="card p-3 text-left hover:border-[var(--accent)] transition-colors"
+                onClick={() => setExpandedMile(moment.mile === '1-3' ? 1 : moment.mile === '21-22' ? 21 : Number(moment.mile))}
+                className="card p-3 text-left hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
               >
                 <div className="flex items-center gap-1.5 mb-1">
-                  <Icon size={12} className="text-[var(--accent)]" />
-                  <span className="text-xs font-mono text-[var(--accent)]">Mile {moment.mile}</span>
+                  <Icon size={12} className={moment.color} />
+                  <span className="text-xs font-mono text-[var(--text-muted)]">Mile {moment.mile}</span>
                 </div>
                 <p className="text-sm font-semibold text-[var(--text)]">{moment.label}</p>
                 <p className="text-xs text-[var(--text-muted)]">{moment.desc}</p>
@@ -400,24 +395,24 @@ export default function CourseGuide() {
             const isOpen = expandedMile === mile.mile;
 
             return (
-              <div key={mile.mile} className={`rounded-lg border transition-colors ${isOpen ? 'border-[var(--accent)] bg-[var(--bg-card)]' : 'border-[var(--border)]'}`}>
+              <div key={mile.mile} className={`rounded-lg border transition-colors ${isOpen ? 'border-sky-300 dark:border-sky-700 bg-[var(--bg-card)]' : 'border-[var(--border)]'}`}>
                 <button
                   onClick={() => setExpandedMile(isOpen ? null : mile.mile)}
                   className="w-full flex items-center gap-3 px-4 py-3 text-left"
                 >
-                  <span className={`text-sm font-mono font-bold w-6 flex-shrink-0 ${isOpen ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'}`}>
+                  <span className={`text-sm font-mono font-bold w-6 flex-shrink-0 ${isOpen ? 'text-sky-500' : 'text-[var(--text-muted)]'}`}>
                     {mile.mile}
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-medium text-[var(--text)] truncate">{mile.location}</span>
                       {mile.landmark && (
-                        <span className="hidden sm:inline text-[10px] font-medium text-[var(--accent)] bg-[var(--accent-muted)] px-1.5 py-0.5 rounded flex-shrink-0">
+                        <span className="hidden sm:inline text-[10px] font-medium text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/30 px-1.5 py-0.5 rounded flex-shrink-0">
                           {mile.landmark}
                         </span>
                       )}
                       {mile.risk && !mile.landmark && (
-                        <AlertTriangle size={12} className="text-[var(--danger)] flex-shrink-0" />
+                        <Info size={12} className="text-amber-400 flex-shrink-0" />
                       )}
                     </div>
                     <span className="text-xs text-[var(--text-muted)]">km {mile.km} · Crowd: {mile.crowd}</span>
@@ -431,15 +426,15 @@ export default function CourseGuide() {
                       <p className="text-sm text-[var(--text)] leading-relaxed">{mile.what}</p>
                     </div>
 
-                    <div className="ml-9 pl-3 border-l-2 border-[var(--accent)]">
-                      <p className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide mb-1">Strategy</p>
+                    <div className="ml-9 pl-3 border-l-2 border-emerald-300 dark:border-emerald-700">
+                      <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-1">Strategy</p>
                       <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{mile.strategy}</p>
                     </div>
 
                     {mile.risk && (
-                      <div className="ml-9 flex items-start gap-2 p-2.5 rounded bg-[var(--accent-muted)]">
-                        <AlertTriangle size={13} className="text-[var(--accent)] flex-shrink-0 mt-0.5" />
-                        <p className="text-xs text-[var(--accent)] font-medium">{mile.risk}</p>
+                      <div className="ml-9 flex items-start gap-2 p-2.5 rounded bg-amber-50 dark:bg-amber-900/15">
+                        <Info size={13} className="text-amber-500 flex-shrink-0 mt-0.5" />
+                        <p className="text-xs text-amber-700 dark:text-amber-400 font-medium">{mile.risk}</p>
                       </div>
                     )}
                   </div>
@@ -455,11 +450,11 @@ export default function CourseGuide() {
         <div className="mt-8 card p-5">
           <h3 className="text-sm font-semibold text-[var(--text)] mb-3">Course tips</h3>
           <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-            <li className="flex gap-2"><span className="text-[var(--accent)] font-bold">1.</span> Follow the blue line painted on the road  - it marks the shortest measured route and can save you 200–400m.</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)] font-bold">2.</span> GPS watches lose accuracy at Canary Wharf (miles 16–19). Switch to lap pace or run by effort.</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)] font-bold">3.</span> Aid stations stretch 200m  - grab water from the far end to avoid the initial crush.</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)] font-bold">4.</span> Write your name on your shirt in large letters. The crowd will shout it for 26.2 miles.</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)] font-bold">5.</span> If you bonk at mile 18–22, walk through the next aid station, take gel + water, then run/walk 4:1. This is damage control, not giving up.</li>
+            <li className="flex gap-2"><span className="text-sky-500 font-bold">1.</span> Follow the blue line painted on the road  - it marks the shortest measured route and can save you 200–400m.</li>
+            <li className="flex gap-2"><span className="text-sky-500 font-bold">2.</span> GPS watches lose accuracy at Canary Wharf (miles 16–19). Switch to lap pace or run by effort.</li>
+            <li className="flex gap-2"><span className="text-sky-500 font-bold">3.</span> Aid stations stretch 200m  - grab water from the far end to avoid the initial crush.</li>
+            <li className="flex gap-2"><span className="text-sky-500 font-bold">4.</span> Write your name on your shirt in large letters. The crowd will shout it for 26.2 miles.</li>
+            <li className="flex gap-2"><span className="text-sky-500 font-bold">5.</span> If you bonk at mile 18–22, walk through the next aid station, take gel + water, then run/walk 4:1. This is damage control, not giving up.</li>
           </ul>
         </div>
       </AnimateIn>
