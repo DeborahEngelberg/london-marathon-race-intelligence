@@ -273,60 +273,90 @@ const MILES: MileData[] = [
   },
 ];
 
+const LANDMARKS_CHART = [
+  { mile: 0, label: 'Start' },
+  { mile: 6, label: 'Cutty Sark' },
+  { mile: 12, label: 'Tower Bridge' },
+  { mile: 17, label: 'Canary Wharf' },
+  { mile: 20, label: 'Mile 20' },
+  { mile: 25, label: 'Big Ben' },
+  { mile: 26, label: 'Finish' },
+];
+
 function ElevationChart() {
-  const maxElevation = Math.max(...ELEVATION_DATA.map(d => d.meters));
-  const chartHeight = 120;
-  const chartWidth = '100%';
+  const maxElev = Math.max(...ELEVATION_DATA.map(d => d.meters));
+  const minElev = 0;
+  const pad = { top: 30, right: 8, bottom: 28, left: 32 };
+  const w = 700;
+  const h = 150;
+  const plotW = w - pad.left - pad.right;
+  const plotH = h - pad.top - pad.bottom;
+
+  const pts = ELEVATION_DATA.map((d, i) => ({
+    x: pad.left + (i / (ELEVATION_DATA.length - 1)) * plotW,
+    y: pad.top + plotH - ((d.meters - minElev) / (maxElev - minElev)) * plotH,
+    ...d,
+  }));
+
+  // Smooth cubic bezier curve
+  const line = pts.map((p, i) => {
+    if (i === 0) return `M ${p.x} ${p.y}`;
+    const prev = pts[i - 1];
+    const cx = (prev.x + p.x) / 2;
+    return `C ${cx} ${prev.y}, ${cx} ${p.y}, ${p.x} ${p.y}`;
+  }).join(' ');
+
+  const area = line + ` L ${pts[pts.length - 1].x} ${pad.top + plotH} L ${pts[0].x} ${pad.top + plotH} Z`;
 
   return (
-    <div className="relative">
-      <div className="flex items-end gap-[2px] sm:gap-1" style={{ height: chartHeight }}>
-        {ELEVATION_DATA.map((point, i) => {
-          const height = (point.meters / maxElevation) * chartHeight;
-          const isLandmark = [6, 12, 17, 20, 25].includes(i);
+    <div>
+      <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#7dd3fc" stopOpacity="0.02" />
+          </linearGradient>
+        </defs>
 
+        {/* Horizontal grid */}
+        {[0, 10, 20, 30, 40].map(elev => {
+          const y = pad.top + plotH - ((elev - minElev) / (maxElev - minElev)) * plotH;
           return (
-            <div
-              key={i}
-              className="flex-1 relative group"
-              style={{ height: chartHeight }}
-            >
-              <div
-                className={`absolute bottom-0 w-full rounded-t-sm transition-colors ${
-                  isLandmark ? 'bg-sky-400 dark:bg-sky-500' : 'bg-sky-200 dark:bg-sky-800'
-                } group-hover:bg-sky-500 dark:group-hover:bg-sky-400`}
-                style={{ height: `${height}px` }}
-              />
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] text-[var(--text-muted)] opacity-0 group-hover:opacity-100 whitespace-nowrap pointer-events-none font-mono">
-                {point.meters}m
-              </div>
-            </div>
+            <g key={elev}>
+              <line x1={pad.left} y1={y} x2={w - pad.right} y2={y} stroke="var(--border)" strokeWidth="0.5" />
+              <text x={pad.left - 5} y={y + 3} textAnchor="end" fill="var(--text-muted)" fontSize="7" fontFamily="ui-monospace, monospace">{elev}m</text>
+            </g>
           );
         })}
-      </div>
 
-      {/* Mile markers */}
-      <div className="flex mt-1">
-        {ELEVATION_DATA.map((point, i) => (
-          <div key={i} className="flex-1 text-center">
-            {i % 5 === 0 && (
-              <span className="text-[9px] text-[var(--text-muted)] font-mono">{point.mile}</span>
-            )}
-          </div>
+        {/* Area fill */}
+        <path d={area} fill="url(#areaFill)" />
+
+        {/* Line */}
+        <path d={line} fill="none" stroke="#38bdf8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+
+        {/* Mile labels on x-axis */}
+        {pts.filter((_, i) => i % 5 === 0 || i === pts.length - 1).map(p => (
+          <text key={p.mile} x={p.x} y={h - 5} textAnchor="middle" fill="var(--text-muted)" fontSize="7" fontFamily="ui-monospace, monospace">{p.mile}</text>
         ))}
-      </div>
 
-      {/* Legend */}
-      <div className="flex items-center gap-4 mt-3 text-[10px] text-[var(--text-muted)]">
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-sm bg-sky-400" />
-          <span>Key landmarks</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-sm bg-sky-200 dark:bg-sky-800" />
-          <span>Elevation</span>
-        </div>
-        <span className="ml-auto font-mono">Total gain: ~40m</span>
+        {/* Landmark dots + labels */}
+        {LANDMARKS_CHART.map(lm => {
+          const p = pts[lm.mile];
+          if (!p) return null;
+          const isEnd = lm.mile === 0 || lm.mile === 26;
+          return (
+            <g key={lm.mile}>
+              <circle cx={p.x} cy={p.y} r={isEnd ? 3.5 : 2.5} fill={isEnd ? '#34d399' : '#38bdf8'} stroke="var(--bg-card)" strokeWidth="1.5" />
+              <text x={p.x} y={p.y - 8} textAnchor="middle" fill="var(--text-secondary)" fontSize="7" fontWeight="500">{lm.label}</text>
+            </g>
+          );
+        })}
+      </svg>
+
+      <div className="flex items-center justify-between text-[10px] text-[var(--text-muted)]">
+        <span>Total elevation gain: ~40m. One of the flattest World Major courses.</span>
+        <span className="font-mono">26.2 mi / 42.2 km</span>
       </div>
     </div>
   );

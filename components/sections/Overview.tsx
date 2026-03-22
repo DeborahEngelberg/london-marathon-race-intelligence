@@ -43,9 +43,9 @@ export default function Overview({ onNavigate }: Props) {
           </p>
         </div>
 
-        <h1 className="hero-stagger-2 text-4xl sm:text-5xl lg:text-6xl font-black text-[var(--text)] leading-[1.05] tracking-tight mb-5">
-          Race day intelligence<br />
-          <span className="text-[var(--text-muted)]">for runners & spectators</span>
+        <h1 className="hero-stagger-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--text)] leading-[1.1] tracking-tight mb-5">
+          Race day intelligence for{' '}
+          <span className="text-[var(--text-muted)]">runners & spectators</span>
         </h1>
 
         <p className="hero-stagger-3 text-base sm:text-lg text-[var(--text-secondary)] max-w-xl leading-relaxed mb-8">
