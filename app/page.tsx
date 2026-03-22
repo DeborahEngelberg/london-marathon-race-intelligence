@@ -22,21 +22,43 @@ import Support from '@/components/sections/Support';
 import CourseGuide from '@/components/sections/CourseGuide';
 import RaceDayChecklist from '@/components/sections/RaceDayChecklist';
 
-const TABS = [
-  { id: 'overview', label: 'Overview', icon: Home },
-  { id: 'runner-guide', label: 'Runner', icon: User },
-  { id: 'checklist', label: 'Checklist', icon: ClipboardCheck },
-  { id: 'course-guide', label: 'Course', icon: Route },
-  { id: 'spectator-guide', label: 'Spectator', icon: Eye },
-  { id: 'viewing-routes', label: 'Spectator Routes', icon: MapPin },
-  { id: 'crossing-map', label: 'Crossings', icon: GitBranch },
-  { id: 'transit', label: 'Transit', icon: TrainIcon },
-  { id: 'finish-strategy', label: 'Finish', icon: Flag },
-  { id: 'where-to-stay', label: 'Stay', icon: Bed },
-  { id: 'food', label: 'Food', icon: Utensils },
-  { id: 'common-mistakes', label: 'Mistakes', icon: AlertTriangle },
-  { id: 'support', label: 'Support', icon: Heart },
+const TAB_GROUPS = [
+  {
+    label: null,
+    items: [
+      { id: 'overview', label: 'Overview', icon: Home },
+    ],
+  },
+  {
+    label: 'Runner',
+    items: [
+      { id: 'runner-guide', label: 'Guide', icon: User },
+      { id: 'checklist', label: 'Checklist', icon: ClipboardCheck },
+      { id: 'course-guide', label: 'Course', icon: Route },
+    ],
+  },
+  {
+    label: 'Spectator',
+    items: [
+      { id: 'spectator-guide', label: 'Guide', icon: Eye },
+      { id: 'viewing-routes', label: 'Routes', icon: MapPin },
+      { id: 'crossing-map', label: 'Crossings', icon: GitBranch },
+    ],
+  },
+  {
+    label: 'Everyone',
+    items: [
+      { id: 'transit', label: 'Transit', icon: TrainIcon },
+      { id: 'finish-strategy', label: 'Finish', icon: Flag },
+      { id: 'where-to-stay', label: 'Stay', icon: Bed },
+      { id: 'food', label: 'Food', icon: Utensils },
+      { id: 'common-mistakes', label: 'Mistakes', icon: AlertTriangle },
+      { id: 'support', label: 'Support', icon: Heart },
+    ],
+  },
 ];
+
+const ALL_TABS = TAB_GROUPS.flatMap(g => g.items);
 
 const defaultFilters: FilterState = {
   audience: [],
@@ -124,18 +146,30 @@ export default function HomePage() {
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-0.5">
-              {TABS.map(tab => (
-                <button
-                  key={tab.id}
-                  onClick={() => navigateToTab(tab.id)}
-                  className={`px-2.5 py-1.5 text-xs font-medium rounded transition-colors ${
-                    activeTab === tab.id
-                      ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
-                      : 'text-[var(--text-muted)] hover:text-[var(--text)]'
-                  }`}
-                >
-                  {tab.label}
-                </button>
+              {TAB_GROUPS.map((group, gi) => (
+                <Fragment key={gi}>
+                  {gi > 0 && (
+                    <div className="flex items-center mx-1.5">
+                      <div className="w-px h-4 bg-[var(--border)]" />
+                      {group.label && (
+                        <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--text-muted)] ml-1.5 mr-0.5">{group.label}</span>
+                      )}
+                    </div>
+                  )}
+                  {group.items.map(tab => (
+                    <button
+                      key={tab.id}
+                      onClick={() => navigateToTab(tab.id)}
+                      className={`px-2.5 py-1.5 text-xs font-medium rounded transition-colors ${
+                        activeTab === tab.id
+                          ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
+                          : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </Fragment>
               ))}
             </nav>
 
@@ -167,24 +201,33 @@ export default function HomePage() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-[var(--border)] bg-[var(--bg-card)] animate-fade-slide-down">
-            <div className="max-w-6xl mx-auto px-4 py-2 grid grid-cols-3 gap-1">
-              {TABS.map(tab => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => navigateToTab(tab.id)}
-                    className={`flex items-center gap-1.5 px-3 py-2 rounded text-xs font-medium transition-colors ${
-                      activeTab === tab.id
-                        ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
-                        : 'text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)]'
-                    }`}
-                  >
-                    <Icon size={13} />
-                    {tab.label}
-                  </button>
-                );
-              })}
+            <div className="max-w-6xl mx-auto px-4 py-3">
+              {TAB_GROUPS.map((group, gi) => (
+                <div key={gi} className={gi > 0 ? 'mt-3' : ''}>
+                  {group.label && (
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-1.5 px-1">{group.label}</p>
+                  )}
+                  <div className="grid grid-cols-3 gap-1">
+                    {group.items.map(tab => {
+                      const Icon = tab.icon;
+                      return (
+                        <button
+                          key={tab.id}
+                          onClick={() => navigateToTab(tab.id)}
+                          className={`flex items-center gap-1.5 px-3 py-2 rounded text-xs font-medium transition-colors ${
+                            activeTab === tab.id
+                              ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
+                              : 'text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)]'
+                          }`}
+                        >
+                          <Icon size={13} />
+                          {tab.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
