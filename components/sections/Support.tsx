@@ -147,19 +147,6 @@ export default function Support() {
       </AnimateIn>
 
       <AnimateIn delay={150}>
-        <div className="card p-6 mb-8">
-          <div className="flex items-center gap-2 mb-3">
-            <Download size={18} className="text-[var(--text-muted)]" />
-            <h2 className="text-lg font-bold">Export Data</h2>
-          </div>
-          <p className="text-sm text-[var(--text-secondary)] mb-4">All data is stored locally in your browser.</p>
-          <button onClick={handleExportCSV} className="btn-press inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border" style={{ borderColor: 'var(--border)' }}>
-            <Download size={14} />Export Analytics CSV
-          </button>
-        </div>
-      </AnimateIn>
-
-      <AnimateIn delay={200}>
         <div className="p-5 rounded-xl border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
           <div className="flex items-center gap-2 mb-3">
             <AlertTriangle size={18} className="text-amber-500" />
