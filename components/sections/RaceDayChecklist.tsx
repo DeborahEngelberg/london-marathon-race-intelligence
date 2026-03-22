@@ -178,7 +178,7 @@ export default function RaceDayChecklist() {
           </div>
           {progress === 100 && (
             <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mt-2">
-              You're fully prepared. Go smash it.
+              You&apos;re fully prepared. Go smash it.
             </p>
           )}
         </div>

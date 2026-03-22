@@ -470,7 +470,7 @@ export default function CourseGuide() {
           Your mile-by-mile companion
         </h1>
         <p className="text-sm text-[var(--text-secondary)]">
-          Know exactly what's coming at every stage, from Greenwich Park all the way to The Mall. You've got this.
+          Know exactly what&apos;s coming at every stage, from Greenwich Park all the way to The Mall. You&apos;ve got this.
         </p>
       </div>
 

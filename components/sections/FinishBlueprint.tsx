@@ -260,55 +260,28 @@ export default function FinishBlueprint({ filters }: { filters: FilterState }) {
         </button>
 
         {timedExpanded && (
-          <div className="p-4 pt-2 space-y-3 animate-fade-slide-down">
-            {/* Data-driven bullets rendered via BulletCard */}
+          <div className="p-4 pt-2 animate-fade-slide-down">
+            <p className="text-xs text-[var(--text-muted)] mb-3">How long each step actually takes, based on community reports.</p>
+            <div className="space-y-0">
+              {COMMUNITY_TIMED_ITEMS.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-baseline gap-3 py-2 border-b border-[var(--border)] last:border-0"
+                >
+                  <span className="text-xs font-mono text-[var(--text-muted)] w-20 flex-shrink-0 text-right">{item.timeText}</span>
+                  <p className="text-sm text-[var(--text)]">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Data-driven bullets */}
             {timedBullets.length > 0 && (
-              <div className="space-y-2">
-                <p className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wide">
-                  From Research Data
-                </p>
+              <div className="mt-4 space-y-2">
                 {timedBullets.map((b) => (
                   <BulletCard key={b.id} bullet={b} />
                 ))}
               </div>
             )}
-
-            {/* Hardcoded community-reported timed items */}
-            <div className="space-y-2">
-              <p className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wide mt-4">
-                Community-Reported Timings
-              </p>
-              {COMMUNITY_TIMED_ITEMS.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 p-3 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border)]"
-                >
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/20 flex-shrink-0">
-                    <Clock size={14} className="text-orange-600 dark:text-orange-400" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-[var(--text)]">{item.text}</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="inline-flex items-center gap-1 text-xs font-mono font-semibold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/10 px-2 py-0.5 rounded">
-                        <Clock size={10} />
-                        {item.timeText}
-                      </span>
-                      <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
-                        <ExternalLink size={10} />
-                        <a
-                          href={COMMUNITY_URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-[var(--accent)] underline"
-                        >
-                          {COMMUNITY_SOURCE}
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         )}
       </div>

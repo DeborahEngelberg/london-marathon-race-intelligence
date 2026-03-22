@@ -24,8 +24,8 @@ import RaceDayChecklist from '@/components/sections/RaceDayChecklist';
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: Home },
-  { id: 'checklist', label: 'Checklist', icon: ClipboardCheck },
   { id: 'runner-guide', label: 'Runner', icon: User },
+  { id: 'checklist', label: 'Checklist', icon: ClipboardCheck },
   { id: 'course-guide', label: 'Course', icon: Route },
   { id: 'spectator-guide', label: 'Spectator', icon: Eye },
   { id: 'viewing-routes', label: 'Spectator Routes', icon: MapPin },
