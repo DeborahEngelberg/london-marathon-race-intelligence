@@ -2,7 +2,7 @@
 
 import {
   User, Eye, MapPin, GitBranch, Flag, Train, Bed,
-  Utensils, AlertTriangle, ArrowRight, Heart,
+  Utensils, AlertTriangle, ArrowRight, Heart, Route,
 } from 'lucide-react';
 import AnimateIn from '@/components/ui/AnimateIn';
 
@@ -12,8 +12,9 @@ interface Props {
 
 const SECTIONS = [
   { id: 'runner-guide', icon: User, title: 'Runner Guide', desc: 'Start logistics, aid stations, pacing, course strategy' },
+  { id: 'course-guide', icon: Route, title: 'Mile-by-Mile Course', desc: 'Every mile explained with elevation chart and strategy' },
   { id: 'spectator-guide', icon: Eye, title: 'Spectator Guide', desc: 'Best viewing spots, Three-View Rule, Tower Bridge trap' },
-  { id: 'viewing-routes', icon: MapPin, title: 'Viewing Routes', desc: 'Pre-planned routes using DLR and Jubilee Line' },
+  { id: 'viewing-routes', icon: MapPin, title: 'Spectator Routes', desc: 'Pre-planned viewing routes using DLR and Jubilee Line' },
   { id: 'crossing-map', icon: GitBranch, title: 'Crossing Map', desc: 'How to cross the course via Underground passages' },
   { id: 'transit', icon: Train, title: 'Transit', desc: 'DLR, Jubilee, bus disruptions, station closures' },
   { id: 'finish-strategy', icon: Flag, title: 'Finish Strategy', desc: 'The Mall, Horse Guards reunion, baggage collection' },
@@ -51,18 +52,20 @@ export default function Overview({ onNavigate }: Props) {
           70+ community-verified tips covering start logistics, viewing strategy, transit, course crossings, and reunion planning. Everything you actually need on race day.
         </p>
 
-        <div className="hero-stagger-4 flex gap-3">
+        <div className="hero-stagger-4 flex flex-col sm:flex-row gap-3">
           <button
             onClick={() => onNavigate?.('runner-guide')}
-            className="px-5 py-2.5 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-[var(--accent-dark)] transition-all"
           >
-            I&apos;m running
+            <User size={16} />
+            I&apos;m running &rarr;
           </button>
           <button
             onClick={() => onNavigate?.('spectator-guide')}
-            className="px-5 py-2.5 rounded-lg border border-[var(--border)] text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-elevated)] transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-[var(--border)] text-sm font-semibold text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
           >
-            I&apos;m spectating
+            <Eye size={16} />
+            I&apos;m spectating &rarr;
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Fragment } from 'react';
-import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search } from 'lucide-react';
+import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search, Route } from 'lucide-react';
 import { getTheme, setTheme as persistTheme, trackEvent } from '@/lib/store';
 import { FilterState } from '@/lib/types';
 import GlobalSearch from '@/components/ui/GlobalSearch';
@@ -19,12 +19,14 @@ import WhereToStay from '@/components/sections/WhereToStay';
 import FoodRestaurants from '@/components/sections/FoodRestaurants';
 import FailureModes from '@/components/sections/FailureModes';
 import Support from '@/components/sections/Support';
+import CourseGuide from '@/components/sections/CourseGuide';
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: Home },
   { id: 'runner-guide', label: 'Runner', icon: User },
+  { id: 'course-guide', label: 'Course', icon: Route },
   { id: 'spectator-guide', label: 'Spectator', icon: Eye },
-  { id: 'viewing-routes', label: 'Routes', icon: MapPin },
+  { id: 'viewing-routes', label: 'Spectator Routes', icon: MapPin },
   { id: 'crossing-map', label: 'Crossings', icon: GitBranch },
   { id: 'transit', label: 'Transit', icon: TrainIcon },
   { id: 'finish-strategy', label: 'Finish', icon: Flag },
@@ -77,6 +79,7 @@ export default function HomePage() {
     switch (activeTab) {
       case 'overview': return <Overview onNavigate={navigateToTab} />;
       case 'runner-guide': return <RunnerIntelligence />;
+      case 'course-guide': return <CourseGuide />;
       case 'spectator-guide': return <SpectatorIntelligence />;
       case 'viewing-routes': return <RoutePlanner />;
       case 'crossing-map': return <CrossingDatabase />;
@@ -135,9 +138,6 @@ export default function HomePage() {
 
             {/* Controls */}
             <div className="flex items-center gap-1">
-              <div className="hidden md:block w-48">
-                <GlobalSearch onNavigate={navigateToTab} />
-              </div>
               <FiltersDrawer filters={filters} onChange={setFilters} />
               <MyOpsPlan />
               <button
@@ -155,8 +155,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Mobile search */}
-          <div className="md:hidden pb-2">
+          {/* Search bar — full width below nav */}
+          <div className="pb-2 pt-1">
             <GlobalSearch onNavigate={navigateToTab} />
           </div>
         </div>
