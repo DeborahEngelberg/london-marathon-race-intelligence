@@ -283,12 +283,13 @@ const LANDMARKS_CHART = [
   { mile: 26, label: 'Finish' },
 ];
 
-function ElevationChart() {
+function ElevationChart({ activeMile, onSelectMile }: { activeMile: number | null; onSelectMile: (mile: number) => void }) {
+  const [hoverMile, setHoverMile] = useState<number | null>(null);
   const maxElev = Math.max(...ELEVATION_DATA.map(d => d.meters));
   const minElev = 0;
   const pad = { top: 30, right: 8, bottom: 28, left: 32 };
   const w = 700;
-  const h = 150;
+  const h = 170;
   const plotW = w - pad.left - pad.right;
   const plotH = h - pad.top - pad.bottom;
 
@@ -308,9 +309,20 @@ function ElevationChart() {
 
   const area = line + ` L ${pts[pts.length - 1].x} ${pad.top + plotH} L ${pts[0].x} ${pad.top + plotH} Z`;
 
+  const shownMile = hoverMile ?? activeMile;
+  const shownPt = shownMile !== null ? pts[shownMile] : null;
+  const shownData = shownMile !== null ? ELEVATION_DATA[shownMile] : null;
+  const mileInfo = shownMile !== null ? MILES.find(m => m.mile === shownMile + 1) || MILES.find(m => m.mile === shownMile) : null;
+  const landmarkLabel = shownMile !== null ? LANDMARKS_CHART.find(l => l.mile === shownMile)?.label : null;
+
   return (
     <div>
-      <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+      <svg
+        viewBox={`0 0 ${w} ${h}`}
+        className="w-full h-auto cursor-crosshair"
+        preserveAspectRatio="xMidYMid meet"
+        onMouseLeave={() => setHoverMile(null)}
+      >
         <defs>
           <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.25" />
@@ -335,28 +347,104 @@ function ElevationChart() {
         {/* Line */}
         <path d={line} fill="none" stroke="#38bdf8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
 
+        {/* Interactive hit areas per mile */}
+        {pts.map((p, i) => {
+          const sliceW = plotW / (pts.length - 1);
+          return (
+            <rect
+              key={i}
+              x={p.x - sliceW / 2}
+              y={pad.top}
+              width={sliceW}
+              height={plotH}
+              fill="transparent"
+              className="cursor-pointer"
+              onMouseEnter={() => setHoverMile(i)}
+              onClick={() => {
+                const targetMile = i === 0 ? 1 : Math.min(i, 26);
+                onSelectMile(targetMile);
+              }}
+            />
+          );
+        })}
+
+        {/* Hover/active vertical line + dot */}
+        {shownPt && (
+          <g>
+            <line x1={shownPt.x} y1={pad.top} x2={shownPt.x} y2={pad.top + plotH} stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="3 2" opacity="0.6" />
+            <circle cx={shownPt.x} cy={shownPt.y} r="4" fill="#38bdf8" stroke="var(--bg-card)" strokeWidth="2" />
+          </g>
+        )}
+
         {/* Mile labels on x-axis */}
-        {pts.filter((_, i) => i % 5 === 0 || i === pts.length - 1).map(p => (
-          <text key={p.mile} x={p.x} y={h - 5} textAnchor="middle" fill="var(--text-muted)" fontSize="7" fontFamily="ui-monospace, monospace">{p.mile}</text>
+        {pts.map((p, i) => (
+          <text
+            key={i}
+            x={p.x}
+            y={h - 5}
+            textAnchor="middle"
+            fill={shownMile === i ? '#38bdf8' : 'var(--text-muted)'}
+            fontSize={shownMile === i ? '8' : '6.5'}
+            fontWeight={shownMile === i ? '700' : '400'}
+            fontFamily="ui-monospace, monospace"
+            opacity={i % 5 === 0 || i === pts.length - 1 || shownMile === i ? 1 : 0}
+          >
+            {p.mile}
+          </text>
         ))}
 
-        {/* Landmark dots + labels */}
+        {/* Landmark dots */}
         {LANDMARKS_CHART.map(lm => {
           const p = pts[lm.mile];
           if (!p) return null;
           const isEnd = lm.mile === 0 || lm.mile === 26;
+          const isHovered = shownMile === lm.mile;
           return (
             <g key={lm.mile}>
-              <circle cx={p.x} cy={p.y} r={isEnd ? 3.5 : 2.5} fill={isEnd ? '#34d399' : '#38bdf8'} stroke="var(--bg-card)" strokeWidth="1.5" />
-              <text x={p.x} y={p.y - 8} textAnchor="middle" fill="var(--text-secondary)" fontSize="7" fontWeight="500">{lm.label}</text>
+              <circle cx={p.x} cy={p.y} r={isHovered ? 4.5 : isEnd ? 3.5 : 2.5} fill={isEnd ? '#34d399' : '#38bdf8'} stroke="var(--bg-card)" strokeWidth="1.5" />
+              {!isHovered && (
+                <text x={p.x} y={p.y - 9} textAnchor="middle" fill="var(--text-secondary)" fontSize="7" fontWeight="500">{lm.label}</text>
+              )}
             </g>
           );
         })}
       </svg>
 
-      <div className="flex items-center justify-between text-[10px] text-[var(--text-muted)]">
-        <span>Total elevation gain: ~40m. One of the flattest World Major courses.</span>
-        <span className="font-mono">26.2 mi / 42.2 km</span>
+      {/* Info panel below chart */}
+      <div className="min-h-[52px] mt-1">
+        {shownPt && shownData ? (
+          <div className="flex items-start gap-4 px-1 py-2 rounded-lg bg-[var(--bg-elevated)] animate-fade-in">
+            <div className="flex-shrink-0 text-center">
+              <span className="text-lg font-bold text-sky-500 font-mono">{shownData.mile}</span>
+              <p className="text-[9px] text-[var(--text-muted)]">mile</p>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-sm font-semibold text-[var(--text)]">{shownData.meters}m elevation</span>
+                {landmarkLabel && (
+                  <span className="text-[10px] font-medium text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/30 px-1.5 py-0.5 rounded">{landmarkLabel}</span>
+                )}
+                <span className="text-[10px] text-[var(--text-muted)] font-mono">km {shownData.km.toFixed(1)}</span>
+              </div>
+              {mileInfo && (
+                <p className="text-xs text-[var(--text-secondary)] mt-0.5 line-clamp-1">{mileInfo.location}</p>
+              )}
+            </div>
+            <button
+              onClick={() => {
+                const targetMile = shownData.mile === 0 ? 1 : Math.min(shownData.mile, 26);
+                onSelectMile(targetMile);
+              }}
+              className="text-[10px] font-medium text-sky-500 hover:text-sky-600 flex-shrink-0 mt-0.5"
+            >
+              View details
+            </button>
+          </div>
+        ) : (
+          <p className="text-[10px] text-[var(--text-muted)] py-2 px-1">
+            Hover or tap the chart to explore each mile. Total gain: ~40m, one of the flattest World Major courses.
+          </p>
+        )}
       </div>
     </div>
   );
@@ -364,6 +452,14 @@ function ElevationChart() {
 
 export default function CourseGuide() {
   const [expandedMile, setExpandedMile] = useState<number | null>(null);
+
+  const selectAndScrollToMile = (mile: number) => {
+    setExpandedMile(mile);
+    setTimeout(() => {
+      const el = document.getElementById(`mile-${mile}`);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  };
 
   return (
     <div>
@@ -382,7 +478,7 @@ export default function CourseGuide() {
       <AnimateIn>
         <div className="card p-5 mb-8">
           <h2 className="text-sm font-semibold text-[var(--text)] mb-4">Elevation profile</h2>
-          <ElevationChart />
+          <ElevationChart activeMile={expandedMile} onSelectMile={selectAndScrollToMile} />
           <p className="text-xs text-[var(--text-muted)] mt-3">
             Hover over bars for exact elevation. The course drops 30m in the first 3 miles, then is essentially flat with gentle undulations. One of the fastest major marathon courses in the world.
           </p>
@@ -402,7 +498,7 @@ export default function CourseGuide() {
             return (
               <button
                 key={i}
-                onClick={() => setExpandedMile(moment.mile === '1-3' ? 1 : moment.mile === '21-22' ? 21 : Number(moment.mile))}
+                onClick={() => selectAndScrollToMile(moment.mile === '1-3' ? 1 : moment.mile === '21-22' ? 21 : Number(moment.mile))}
                 className="card p-3 text-left hover:border-sky-300 dark:hover:border-sky-700 transition-colors"
               >
                 <div className="flex items-center gap-1.5 mb-1">
@@ -425,9 +521,9 @@ export default function CourseGuide() {
             const isOpen = expandedMile === mile.mile;
 
             return (
-              <div key={mile.mile} className={`rounded-lg border transition-colors ${isOpen ? 'border-sky-300 dark:border-sky-700 bg-[var(--bg-card)]' : 'border-[var(--border)]'}`}>
+              <div key={mile.mile} id={`mile-${mile.mile}`} className={`rounded-lg border transition-colors ${isOpen ? 'border-sky-300 dark:border-sky-700 bg-[var(--bg-card)]' : 'border-[var(--border)]'}`}>
                 <button
-                  onClick={() => setExpandedMile(isOpen ? null : mile.mile)}
+                  onClick={() => isOpen ? setExpandedMile(null) : selectAndScrollToMile(mile.mile)}
                   className="w-full flex items-center gap-3 px-4 py-3 text-left"
                 >
                   <span className={`text-sm font-mono font-bold w-6 flex-shrink-0 ${isOpen ? 'text-sky-500' : 'text-[var(--text-muted)]'}`}>
