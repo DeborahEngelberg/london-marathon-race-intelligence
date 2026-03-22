@@ -145,32 +145,55 @@ export default function HomePage() {
             </button>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-0.5">
-              {TAB_GROUPS.map((group, gi) => (
-                <Fragment key={gi}>
-                  {gi > 0 && (
-                    <div className="flex items-center mx-1.5">
-                      <div className="w-px h-4 bg-[var(--border)]" />
-                      {group.label && (
-                        <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--text-muted)] ml-1.5 mr-0.5">{group.label}</span>
-                      )}
-                    </div>
-                  )}
-                  {group.items.map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => navigateToTab(tab.id)}
-                      className={`px-2.5 py-1.5 text-xs font-medium rounded transition-colors ${
-                        activeTab === tab.id
-                          ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
-                          : 'text-[var(--text-muted)] hover:text-[var(--text)]'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </Fragment>
-              ))}
+            <nav className="hidden lg:flex items-center gap-1">
+              {TAB_GROUPS.map((group, gi) => {
+                const groupColor = group.label === 'Runner'
+                  ? 'bg-blue-50 dark:bg-blue-900/15 border-blue-200 dark:border-blue-800'
+                  : group.label === 'Spectator'
+                  ? 'bg-violet-50 dark:bg-violet-900/15 border-violet-200 dark:border-violet-800'
+                  : null;
+
+                return (
+                  <Fragment key={gi}>
+                    {group.label && groupColor ? (
+                      <div className={`flex items-center gap-0.5 px-1 py-0.5 rounded-lg border ${groupColor} ml-1`}>
+                        <span className={`text-[9px] font-bold uppercase tracking-wider px-1 ${
+                          group.label === 'Runner' ? 'text-blue-500' : 'text-violet-500'
+                        }`}>{group.label}</span>
+                        {group.items.map(tab => (
+                          <button
+                            key={tab.id}
+                            onClick={() => navigateToTab(tab.id)}
+                            className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
+                              activeTab === tab.id
+                                ? group.label === 'Runner'
+                                  ? 'text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-800/40'
+                                  : 'text-violet-700 dark:text-violet-300 bg-violet-100 dark:bg-violet-800/40'
+                                : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                            }`}
+                          >
+                            {tab.label}
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      group.items.map(tab => (
+                        <button
+                          key={tab.id}
+                          onClick={() => navigateToTab(tab.id)}
+                          className={`px-2.5 py-1.5 text-xs font-medium rounded transition-colors ${
+                            activeTab === tab.id
+                              ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
+                              : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
+                      ))
+                    )}
+                  </Fragment>
+                );
+              })}
             </nav>
 
             {/* Controls */}
@@ -201,33 +224,51 @@ export default function HomePage() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-[var(--border)] bg-[var(--bg-card)] animate-fade-slide-down">
-            <div className="max-w-6xl mx-auto px-4 py-3">
-              {TAB_GROUPS.map((group, gi) => (
-                <div key={gi} className={gi > 0 ? 'mt-3' : ''}>
-                  {group.label && (
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-1.5 px-1">{group.label}</p>
-                  )}
-                  <div className="grid grid-cols-3 gap-1">
-                    {group.items.map(tab => {
-                      const Icon = tab.icon;
-                      return (
-                        <button
-                          key={tab.id}
-                          onClick={() => navigateToTab(tab.id)}
-                          className={`flex items-center gap-1.5 px-3 py-2 rounded text-xs font-medium transition-colors ${
-                            activeTab === tab.id
-                              ? 'text-[var(--accent)] bg-[var(--accent-muted)]'
-                              : 'text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)]'
-                          }`}
-                        >
-                          <Icon size={13} />
-                          {tab.label}
-                        </button>
-                      );
-                    })}
+            <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
+              {TAB_GROUPS.map((group, gi) => {
+                const isRunner = group.label === 'Runner';
+                const isSpectator = group.label === 'Spectator';
+                const borderColor = isRunner
+                  ? 'border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-900/10'
+                  : isSpectator
+                  ? 'border-violet-200 dark:border-violet-800 bg-violet-50/50 dark:bg-violet-900/10'
+                  : '';
+
+                return (
+                  <div key={gi} className={group.label ? `rounded-lg border p-2 ${borderColor}` : ''}>
+                    {group.label && (
+                      <p className={`text-[10px] font-bold uppercase tracking-wider mb-1.5 px-1 ${
+                        isRunner ? 'text-blue-500' : isSpectator ? 'text-violet-500' : 'text-[var(--text-muted)]'
+                      }`}>{group.label}</p>
+                    )}
+                    <div className="grid grid-cols-3 gap-1">
+                      {group.items.map(tab => {
+                        const Icon = tab.icon;
+                        const activeColor = isRunner
+                          ? 'text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-800/40'
+                          : isSpectator
+                          ? 'text-violet-700 dark:text-violet-300 bg-violet-100 dark:bg-violet-800/40'
+                          : 'text-[var(--accent)] bg-[var(--accent-muted)]';
+
+                        return (
+                          <button
+                            key={tab.id}
+                            onClick={() => navigateToTab(tab.id)}
+                            className={`flex items-center gap-1.5 px-3 py-2 rounded text-xs font-medium transition-colors ${
+                              activeTab === tab.id
+                                ? activeColor
+                                : 'text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)]'
+                            }`}
+                          >
+                            <Icon size={13} />
+                            {tab.label}
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
