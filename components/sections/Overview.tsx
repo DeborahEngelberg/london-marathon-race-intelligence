@@ -1,221 +1,120 @@
 'use client';
 
-import { useState } from 'react';
 import {
-  User, Eye, Map, GitBranch, Flag, Train, Bed,
-  UtensilsCrossed, AlertTriangle, Zap, Clock, MapPin,
-  ChevronRight, Lightbulb,
+  User, Eye, MapPin, GitBranch, Flag, Train, Bed,
+  Utensils, AlertTriangle, ArrowRight, Heart,
 } from 'lucide-react';
 import AnimateIn from '@/components/ui/AnimateIn';
-
-const NAV_CARDS = [
-  {
-    id: 'runner-guide',
-    icon: User,
-    title: 'Runner Guide',
-    desc: 'Greenwich Park start logistics, aid stations, pacing strategy for the downhill start and The Highway wall.',
-    color: '#E41E31',
-  },
-  {
-    id: 'spectator-guide',
-    icon: Eye,
-    title: 'Spectator Guide',
-    desc: 'Three-View Rule, best spots from Cutty Sark to The Mall, Tower Bridge trap warning.',
-    color: '#C8991E',
-  },
-  {
-    id: 'viewing-routes',
-    icon: Map,
-    title: 'Viewing Routes',
-    desc: 'Pre-planned spectator routes using DLR and Jubilee Line to see your runner multiple times.',
-    color: '#10B981',
-  },
-  {
-    id: 'crossing-map',
-    icon: GitBranch,
-    title: 'Crossing Map',
-    desc: 'Every Underground passage and bridge crossing to get across the marathon course on race day.',
-    color: '#8B5CF6',
-  },
-  {
-    id: 'finish-strategy',
-    icon: Flag,
-    title: 'Finish Strategy',
-    desc: 'The Mall finish area, Horse Guards Parade reunion, baggage collection, and backup meeting plans.',
-    color: '#F59E0B',
-  },
-  {
-    id: 'transit',
-    icon: Train,
-    title: 'Transit',
-    desc: 'DLR and Underground cheat sheet, bus disruptions, station closures, and TfL service updates.',
-    color: '#003278',
-  },
-  {
-    id: 'where-to-stay',
-    icon: Bed,
-    title: 'Where to Stay',
-    desc: 'Greenwich, London Bridge, Canary Wharf, Westminster — neighbourhood breakdown for race weekend.',
-    color: '#EC4899',
-  },
-  {
-    id: 'food',
-    icon: UtensilsCrossed,
-    title: 'Food',
-    desc: 'Pre-race carb loading, post-race celebration spots, race morning breakfast options.',
-    color: '#14B8A6',
-  },
-  {
-    id: 'common-mistakes',
-    icon: AlertTriangle,
-    title: 'Common Mistakes',
-    desc: 'The errors first-timers make and how veterans avoid them.',
-    color: '#EF4444',
-  },
-];
-
-const TIPS = [
-  {
-    icon: Eye,
-    title: 'Three-View Rule',
-    text: 'Pick a maximum of 3 spectating spots. More than 3 and you spend more time on the Tube than watching.',
-  },
-  {
-    icon: Train,
-    title: 'Use the Underground to cross',
-    text: 'The course blocks surface crossings. DLR and Jubilee Line are your lifelines — master them.',
-  },
-  {
-    icon: Clock,
-    title: 'Arrive at Greenwich by 07:30',
-    text: 'Assembly areas open at 07:00. Gates close 30 minutes before your wave. Do not cut it close.',
-  },
-  {
-    icon: AlertTriangle,
-    title: "Don't rely on buses",
-    text: 'Dozens of bus routes are diverted or suspended. Use the Tube and DLR exclusively on race day.',
-  },
-  {
-    icon: MapPin,
-    title: 'Plan reunion at Horse Guards Parade',
-    text: 'Agree a specific lettered meeting point. Phone signal is unreliable post-finish.',
-  },
-  {
-    icon: Zap,
-    title: "Don't go out too fast on Greenwich downhill",
-    text: 'The first 5km is downhill. Every second banked here costs double after mile 20. Start 10-15s/mile slow.',
-  },
-];
 
 interface Props {
   onNavigate?: (tabId: string) => void;
 }
 
-export default function Overview({ onNavigate }: Props) {
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+const SECTIONS = [
+  { id: 'runner-guide', icon: User, title: 'Runner Guide', desc: 'Start logistics, aid stations, pacing, course strategy' },
+  { id: 'spectator-guide', icon: Eye, title: 'Spectator Guide', desc: 'Best viewing spots, Three-View Rule, Tower Bridge trap' },
+  { id: 'viewing-routes', icon: MapPin, title: 'Viewing Routes', desc: 'Pre-planned routes using DLR and Jubilee Line' },
+  { id: 'crossing-map', icon: GitBranch, title: 'Crossing Map', desc: 'How to cross the course via Underground passages' },
+  { id: 'transit', icon: Train, title: 'Transit', desc: 'DLR, Jubilee, bus disruptions, station closures' },
+  { id: 'finish-strategy', icon: Flag, title: 'Finish Strategy', desc: 'The Mall, Horse Guards reunion, baggage collection' },
+  { id: 'where-to-stay', icon: Bed, title: 'Where to Stay', desc: 'Neighbourhood rankings for race weekend' },
+  { id: 'food', icon: Utensils, title: 'Food', desc: 'Carb loading, breakfast, post-race restaurants' },
+  { id: 'common-mistakes', icon: AlertTriangle, title: 'Common Mistakes', desc: 'What goes wrong and how veterans avoid it' },
+];
 
+const ESSENTIALS = [
+  { label: 'Arrive Greenwich by 07:30', detail: 'Assembly opens at 07:00. Gates close 30 min before your wave. Late arrival cascades into every subsequent step.' },
+  { label: 'Three-View Rule', detail: 'Spectators: pick 3 viewing spots maximum. More than 3 and you\'ll spend more time on the Tube than watching.' },
+  { label: 'DLR + Jubilee are your lifelines', detail: 'Buses are suspended. Surface crossings impossible. Master DLR (Greenwich–Canary Wharf–Bank) and Jubilee (Canary Wharf–Westminster).' },
+  { label: 'Plan reunion before race day', detail: 'Pick a letter zone at Horse Guards Parade. Write it on your arm. Phone signal near the finish is unreliable.' },
+  { label: 'Don\'t go out fast on the Greenwich downhill', detail: 'Every second banked in miles 1–3 costs double after mile 20. Start 10–15 sec/mile slower than goal pace.' },
+  { label: 'Cutty Sark DLR is EXIT ONLY race morning', detail: 'You cannot get off trains at Cutty Sark to reach the start. Use Greenwich, Maze Hill, or Blackheath stations.' },
+];
+
+export default function Overview({ onNavigate }: Props) {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-      {/* Hero */}
-      <div className="text-center mb-12">
-        <div className="hero-stagger-1 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-white" style={{ background: '#E41E31' }}>
-            <Zap size={12} />
+    <div>
+      {/* Hero — confident, typographic, no decoration */}
+      <div className="pt-6 sm:pt-12 pb-10 sm:pb-14 mb-8 border-b border-[var(--border)]">
+        <div className="hero-stagger-1">
+          <p className="text-xs font-medium text-[var(--accent)] tracking-wide uppercase mb-4">
             TCS London Marathon
-          </span>
+          </p>
         </div>
 
-        <h1 className="hero-stagger-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4" style={{ fontFamily: 'Syne, system-ui, sans-serif' }}>
-          <span style={{ color: 'var(--text)' }}>LONDON MARATHON</span>
-          <br />
-          <span style={{ color: '#E41E31' }}>RACE </span>
-          <span style={{ color: '#C8991E' }}>INTELLIGENCE</span>
+        <h1 className="hero-stagger-2 text-4xl sm:text-5xl lg:text-6xl font-black text-[var(--text)] leading-[1.05] tracking-tight mb-5">
+          Race day intelligence<br />
+          <span className="text-[var(--text-muted)]">for runners & spectators</span>
         </h1>
 
-        <p className="hero-stagger-3 text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-6">
-          Community-sourced strategy guide for runners and spectators.
-          Crossing maps, viewing routes, transit strategy, finish blueprint, and common mistakes.
+        <p className="hero-stagger-3 text-base sm:text-lg text-[var(--text-secondary)] max-w-xl leading-relaxed mb-8">
+          70+ community-verified tips covering start logistics, viewing strategy, transit, course crossings, and reunion planning. Everything you actually need on race day.
         </p>
 
-        <div className="hero-stagger-4 flex flex-wrap justify-center gap-3">
-          <span className="badge badge-runner">Runners</span>
-          <span className="badge badge-spectator">Spectators</span>
-          <span className="badge badge-high">Community Verified</span>
+        <div className="hero-stagger-4 flex gap-3">
+          <button
+            onClick={() => onNavigate?.('runner-guide')}
+            className="px-5 py-2.5 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+          >
+            I&apos;m running
+          </button>
+          <button
+            onClick={() => onNavigate?.('spectator-guide')}
+            className="px-5 py-2.5 rounded-lg border border-[var(--border)] text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-elevated)] transition-colors"
+          >
+            I&apos;m spectating
+          </button>
         </div>
       </div>
 
-      <div className="section-divider mb-10" />
+      {/* Essentials — the 6 things everyone needs to know */}
+      <AnimateIn className="mb-12">
+        <h2 className="text-lg font-bold text-[var(--text)] mb-4">Before you read anything else</h2>
+        <div className="space-y-3">
+          {ESSENTIALS.map((tip, i) => (
+            <div key={i} className="flex gap-4 py-3 border-b border-[var(--border)] last:border-0">
+              <span className="text-xs font-bold text-[var(--accent)] mt-0.5 w-4 flex-shrink-0">{i + 1}</span>
+              <div>
+                <p className="text-sm font-semibold text-[var(--text)]">{tip.label}</p>
+                <p className="text-sm text-[var(--text-secondary)] mt-0.5 leading-relaxed">{tip.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </AnimateIn>
 
-      {/* Quick Tips */}
-      <AnimateIn>
-        <div className="mb-12">
-          <div className="flex items-center gap-2 mb-6">
-            <Lightbulb size={20} style={{ color: 'var(--accent-gold)' }} />
-            <h2 className="text-xl font-bold">Quick Tips</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {TIPS.map((tip, i) => {
-              const Icon = tip.icon;
-              return (
-                <div key={i} className="card p-4">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg" style={{ background: 'var(--tool-bg)' }}>
-                      <Icon size={16} style={{ color: 'var(--accent)' }} />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold mb-1">{tip.title}</h3>
-                      <p className="text-xs text-[var(--text-secondary)]">{tip.text}</p>
-                    </div>
-                  </div>
+      {/* Sections — clean list, not a card grid */}
+      <AnimateIn className="mb-12" delay={80}>
+        <h2 className="text-lg font-bold text-[var(--text)] mb-4">Full guide</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
+          {SECTIONS.map(section => {
+            const Icon = section.icon;
+            return (
+              <button
+                key={section.id}
+                onClick={() => onNavigate?.(section.id)}
+                className="flex items-center gap-3 py-3 text-left group border-b border-[var(--border)] sm:border-0"
+              >
+                <Icon size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent)] transition-colors flex-shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">{section.title}</span>
+                  <p className="text-xs text-[var(--text-muted)] truncate">{section.desc}</p>
                 </div>
-              );
-            })}
-          </div>
+                <ArrowRight size={14} className="text-[var(--text-muted)] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+              </button>
+            );
+          })}
         </div>
       </AnimateIn>
 
-      {/* Navigation Cards */}
-      <AnimateIn delay={100}>
-        <div className="mb-12">
-          <h2 className="text-xl font-bold mb-6">Explore Sections</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {NAV_CARDS.map(card => {
-              const Icon = card.icon;
-              const isHovered = hoveredCard === card.id;
-              return (
-                <button
-                  key={card.id}
-                  className="card p-5 text-left transition-all hover:shadow-md group"
-                  style={isHovered ? { borderColor: card.color } : undefined}
-                  onMouseEnter={() => setHoveredCard(card.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  onClick={() => onNavigate?.(card.id)}
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="p-2.5 rounded-xl" style={{ background: `${card.color}15` }}>
-                      <Icon size={20} style={{ color: card.color }} />
-                    </div>
-                    <ChevronRight size={16} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors" />
-                  </div>
-                  <h3 className="text-sm font-bold mb-1">{card.title}</h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{card.desc}</p>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </AnimateIn>
-
-      {/* Disclaimer */}
-      <AnimateIn delay={200}>
-        <div className="text-center text-xs text-[var(--text-muted)] border-t pt-6" style={{ borderColor: 'var(--border)' }}>
-          <p>
-            Not affiliated with TCS London Marathon or London Marathon Events Ltd.
-            <br />
-            Community-sourced information. Always verify with official sources before race day.
-          </p>
-        </div>
-      </AnimateIn>
+      {/* Minimal footer note */}
+      <p className="text-xs text-[var(--text-muted)]">
+        Community-sourced. Not affiliated with TCS London Marathon or London Marathon Events Ltd.
+        Always verify with{' '}
+        <a href="https://www.tcslondonmarathon.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--text)]">
+          official sources
+        </a>.
+      </p>
     </div>
   );
 }
