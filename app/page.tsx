@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Fragment } from 'react';
-import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search, Route } from 'lucide-react';
+import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search, Route, ClipboardCheck } from 'lucide-react';
 import { getTheme, setTheme as persistTheme, trackEvent } from '@/lib/store';
 import { FilterState } from '@/lib/types';
 import GlobalSearch from '@/components/ui/GlobalSearch';
@@ -20,9 +20,11 @@ import FoodRestaurants from '@/components/sections/FoodRestaurants';
 import FailureModes from '@/components/sections/FailureModes';
 import Support from '@/components/sections/Support';
 import CourseGuide from '@/components/sections/CourseGuide';
+import RaceDayChecklist from '@/components/sections/RaceDayChecklist';
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: Home },
+  { id: 'checklist', label: 'Checklist', icon: ClipboardCheck },
   { id: 'runner-guide', label: 'Runner', icon: User },
   { id: 'course-guide', label: 'Course', icon: Route },
   { id: 'spectator-guide', label: 'Spectator', icon: Eye },
@@ -78,6 +80,7 @@ export default function HomePage() {
   const renderSection = () => {
     switch (activeTab) {
       case 'overview': return <Overview onNavigate={navigateToTab} />;
+      case 'checklist': return <RaceDayChecklist />;
       case 'runner-guide': return <RunnerIntelligence />;
       case 'course-guide': return <CourseGuide />;
       case 'spectator-guide': return <SpectatorIntelligence />;

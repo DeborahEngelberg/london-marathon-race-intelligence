@@ -2,7 +2,7 @@
 
 import {
   User, Eye, MapPin, GitBranch, Flag, Train, Bed,
-  Utensils, AlertTriangle, ArrowRight, Heart, Route,
+  Utensils, AlertTriangle, ArrowRight, Heart, Route, ClipboardCheck,
 } from 'lucide-react';
 import AnimateIn from '@/components/ui/AnimateIn';
 
@@ -11,6 +11,7 @@ interface Props {
 }
 
 const SECTIONS = [
+  { id: 'checklist', icon: ClipboardCheck, title: 'Race Day Checklist', desc: '60+ items from expo week to finish line, tap to check off' },
   { id: 'runner-guide', icon: User, title: 'Runner Guide', desc: 'Start logistics, aid stations, pacing, course strategy' },
   { id: 'course-guide', icon: Route, title: 'Mile-by-Mile Course', desc: 'Every mile explained with elevation chart and strategy' },
   { id: 'spectator-guide', icon: Eye, title: 'Spectator Guide', desc: 'Best viewing spots, Three-View Rule, Tower Bridge trap' },
