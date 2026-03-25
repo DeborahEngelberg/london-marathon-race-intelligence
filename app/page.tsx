@@ -5,8 +5,6 @@ import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as 
 import { getTheme, setTheme as persistTheme, trackEvent } from '@/lib/store';
 import { FilterState } from '@/lib/types';
 import GlobalSearch from '@/components/ui/GlobalSearch';
-import MyOpsPlan from '@/components/ui/MyOpsPlan';
-import FiltersDrawer from '@/components/ui/FiltersDrawer';
 
 import Overview from '@/components/sections/Overview';
 import RunnerIntelligence from '@/components/sections/RunnerIntelligence';
@@ -198,8 +196,6 @@ export default function HomePage() {
 
             {/* Controls */}
             <div className="flex items-center gap-1">
-              <FiltersDrawer filters={filters} onChange={setFilters} />
-              <MyOpsPlan />
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
