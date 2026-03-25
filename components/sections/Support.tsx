@@ -109,7 +109,7 @@ export default function Support() {
             <h2 className="text-lg font-bold">Support This Project</h2>
           </div>
           <p className="text-sm text-[var(--text-secondary)] mb-4">
-            London Marathon Race Intelligence is a free, community-sourced project.
+            London Marathon Guide is a free, community-sourced project.
           </p>
           <a href="https://buymeacoffee.com/debbiesoph" target="_blank" rel="noopener noreferrer"
             className="btn-press inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style={{ background: 'var(--accent)' }}>

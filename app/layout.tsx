@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'London Marathon Race Intelligence',
+  title: 'London Marathon Guide',
   description: 'Runner and Spectator Strategy Guide for the TCS London Marathon. Crossing map, viewing routes, transit strategy, finish blueprint, and common mistakes.',
   keywords: ['London Marathon', 'TCS London Marathon', 'marathon spectator guide', 'marathon strategy', 'London running', 'marathon race intelligence'],
 };
