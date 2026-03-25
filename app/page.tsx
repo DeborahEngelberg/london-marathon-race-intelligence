@@ -138,8 +138,7 @@ export default function HomePage() {
               onClick={() => navigateToTab('overview')}
               className="flex items-center gap-2 hover:opacity-70 transition-opacity"
             >
-              <span className="text-sm font-extrabold tracking-tight text-[var(--accent)]">LM</span>
-              <span className="hidden sm:inline text-sm font-semibold text-[var(--text)]">Race Intelligence</span>
+              <span className="text-sm font-extrabold tracking-tight text-[var(--accent)] whitespace-nowrap">LM Race Intelligence</span>
             </button>
 
             {/* Desktop nav */}
