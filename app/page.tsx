@@ -53,7 +53,7 @@ const TAB_GROUPS = [
       { id: 'where-to-stay', label: 'Stay', icon: Bed },
       { id: 'food', label: 'Food', icon: Utensils },
       { id: 'common-mistakes', label: 'Mistakes', icon: AlertTriangle },
-      { id: 'support', label: 'Support', icon: Heart },
+      { id: 'support', label: 'Feedback', icon: Heart },
     ],
   },
 ];
