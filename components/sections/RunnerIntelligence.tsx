@@ -12,8 +12,10 @@ import { Bullet } from '@/lib/types';
 import { saveItem, removeItem, isItemSaved } from '@/lib/store';
 
 const SUBSECTIONS = [
-  { id: 'green-start', label: 'Green Start Guide', icon: MapPin, desc: 'Everything for ballot runners: Maze Hill vs Blackheath, bag drop timing, wave schedule, and hacks.' },
-  { id: 'start-line-logistics', label: 'Start Line Logistics', icon: MapPin, desc: 'Three colour-coded starts in Greenwich Park -- Blue, Red, Green' },
+  { id: 'green-start', label: 'Green Start Guide', icon: MapPin, desc: 'Ballot runners: Maze Hill vs Blackheath, bag drop, wave schedule, and hacks.' },
+  { id: 'blue-start', label: 'Blue Start Guide', icon: MapPin, desc: 'Elite men, championship, and some ballot: Blackheath, flat first mile, descent at 2.3.' },
+  { id: 'red-start', label: 'Red Start Guide', icon: MapPin, desc: 'Elite women, GFA, and charity: Greenwich Park, pacing around fast runners.' },
+  { id: 'start-line-logistics', label: 'General Start Info', icon: MapPin, desc: 'Three colour-coded starts in Greenwich Park -- Blue, Red, Green' },
   { id: 'athletes-village', label: 'Assembly Area Reality', icon: Clock, desc: 'Greenwich Park opens 07:00. Portaloos, charity village, warm-up zones.' },
   { id: 'security-entry-chokepoints', label: 'Security / Entry', icon: Shield, desc: 'Bag checks, prohibited items, gate closure 30 min before wave start.' },
   { id: 'toilet-strategy', label: 'Toilet Strategy', icon: Bath, desc: 'Go early, go often. Queues grow exponentially after 08:30.' },
