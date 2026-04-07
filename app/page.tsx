@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Fragment } from 'react';
-import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search, Route, ClipboardCheck } from 'lucide-react';
+import { Sun, Moon, Menu, X, Home, User, Eye, MapPin, GitBranch, Flag, Train as TrainIcon, Bed, Utensils, AlertTriangle, Heart, Search, Route, ClipboardCheck, Trophy } from 'lucide-react';
 import { getTheme, setTheme as persistTheme, trackEvent } from '@/lib/store';
 import { FilterState } from '@/lib/types';
 import GlobalSearch from '@/components/ui/GlobalSearch';
@@ -19,6 +19,7 @@ import FailureModes from '@/components/sections/FailureModes';
 import Support from '@/components/sections/Support';
 import CourseGuide from '@/components/sections/CourseGuide';
 import RaceDayChecklist from '@/components/sections/RaceDayChecklist';
+import EliteFields from '@/components/sections/EliteFields';
 
 const TAB_GROUPS = [
   {
@@ -46,6 +47,7 @@ const TAB_GROUPS = [
   {
     label: 'Everyone',
     items: [
+      { id: 'elite', label: '2026 Race', icon: Trophy },
       { id: 'transit', label: 'Transit', icon: TrainIcon },
       { id: 'finish-strategy', label: 'Finish', icon: Flag },
       { id: 'where-to-stay', label: 'Stay', icon: Bed },
@@ -106,6 +108,7 @@ export default function HomePage() {
       case 'spectator-guide': return <SpectatorIntelligence />;
       case 'viewing-routes': return <RoutePlanner />;
       case 'crossing-map': return <CrossingDatabase />;
+      case 'elite': return <EliteFields />;
       case 'finish-strategy': return <FinishBlueprint filters={filters} />;
       case 'transit': return <TransitStrategy filters={filters} />;
       case 'where-to-stay': return <WhereToStay filters={filters} />;

@@ -9,7 +9,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "greenwich", "assembly-area"],
+    "tags": [
+      "start-line-logistics",
+      "greenwich",
+      "assembly-area"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -17,7 +21,7 @@
   },
   {
     "id": "b002",
-    "text": "Baggage buses are located near each start area in Greenwich Park. You must use the official clear bag provided and label it with your runner number. Bags are transported to The Mall finish area and reunited at the designated baggage reunion point on Horse Guards Parade. Expect 20–40 minute waits post-finish.",
+    "text": "Baggage buses are located near each start area in Greenwich Park. You must use the official clear bag provided and label it with your runner number. Bags are transported to The Mall finish area and reunited at the designated baggage reunion point on Horse Guards Parade. Expect 20\u201340 minute waits post-finish.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -25,15 +29,19 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["baggage-buses", "start-logistics", "finish-blueprint"],
+    "tags": [
+      "baggage-buses",
+      "start-logistics",
+      "finish-blueprint"
+    ],
     "timeMinutes": 40,
-    "timeText": "Baggage wait: 20–40 min post-finish",
+    "timeText": "Baggage wait: 20\u201340 min post-finish",
     "section": "runner-intelligence",
     "subsection": "gear-discard-warmth"
   },
   {
     "id": "b003",
-    "text": "April weather in London averages 8–14°C (46–57°F) with a high chance of rain. Layers are essential at the start - many runners wear disposable bin bags or old charity shop clothes they can discard at the start line. Wind chill along the Thames corridor (especially at Canary Wharf) can feel significantly colder.",
+    "text": "April weather in London averages 8\u201314\u00b0C (46\u201357\u00b0F) with a high chance of rain. Layers are essential at the start - many runners wear disposable bin bags or old charity shop clothes they can discard at the start line. Wind chill along the Thames corridor (especially at Canary Wharf) can feel significantly colder.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -41,7 +49,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["gear-discard-warmth", "weather", "clothing"],
+    "tags": [
+      "gear-discard-warmth",
+      "weather",
+      "clothing"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -57,7 +69,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["aid-station-behavior", "nutrition", "hydration"],
+    "tags": [
+      "aid-station-behavior",
+      "nutrition",
+      "hydration"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -73,7 +89,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "pacing", "cutty-sark"],
+    "tags": [
+      "race-psychology",
+      "pacing",
+      "cutty-sark"
+    ],
     "timeMinutes": 30,
     "timeText": "~Mile 6 crowd surge",
     "section": "runner-intelligence",
@@ -81,7 +101,7 @@
   },
   {
     "id": "b006",
-    "text": "Tower Bridge at mile 12–13 has cobblestone sections and metal expansion joints that can be slippery when wet. The bridge is also cambered - slightly higher in the centre. Run the middle for the flattest line and watch your footing, especially in rain.",
+    "text": "Tower Bridge at mile 12\u201313 has cobblestone sections and metal expansion joints that can be slippery when wet. The bridge is also cambered - slightly higher in the centre. Run the middle for the flattest line and watch your footing, especially in rain.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-course",
     "label": "Runner tactic",
@@ -89,15 +109,19 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "tower-bridge", "cobblestones"],
+    "tags": [
+      "race-psychology",
+      "tower-bridge",
+      "cobblestones"
+    ],
     "timeMinutes": 60,
-    "timeText": "~Mile 12–13 cobblestones",
+    "timeText": "~Mile 12\u201313 cobblestones",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
   {
     "id": "b007",
-    "text": "Canary Wharf (miles 17–19) creates a wind tunnel effect between the tall buildings, especially on Westferry Road and around the docklands loop. Headwinds here can sap energy. Tuck behind a group if possible and keep your cadence steady.",
+    "text": "Canary Wharf (miles 17\u201319) creates a wind tunnel effect between the tall buildings, especially on Westferry Road and around the docklands loop. Headwinds here can sap energy. Tuck behind a group if possible and keep your cadence steady.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-course",
     "label": "Runner tactic",
@@ -105,15 +129,19 @@
     "confidence": "Med",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "canary-wharf", "wind"],
+    "tags": [
+      "race-psychology",
+      "canary-wharf",
+      "wind"
+    ],
     "timeMinutes": 90,
-    "timeText": "~Mile 17–19 wind tunnel",
+    "timeText": "~Mile 17\u201319 wind tunnel",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
   {
     "id": "b008",
-    "text": "The Highway (miles 21–23) is where the London Marathon is truly raced. The crowds thin out, the Isle of Dogs loop has taken its toll, and the flat exposed road along the Thames offers little shelter. This is 'The Wall' equivalent. Have a mental strategy prepared - break it into lamp posts, mile markers, or count steps.",
+    "text": "The Highway (miles 21\u201323) is where the London Marathon is truly raced. The crowds thin out, the Isle of Dogs loop has taken its toll, and the flat exposed road along the Thames offers little shelter. This is 'The Wall' equivalent. Have a mental strategy prepared - break it into lamp posts, mile markers, or count steps.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-course",
     "label": "Runner tactic",
@@ -121,9 +149,14 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "the-highway", "wall", "mental-strategy"],
+    "tags": [
+      "race-psychology",
+      "the-highway",
+      "wall",
+      "mental-strategy"
+    ],
     "timeMinutes": 120,
-    "timeText": "~Mile 21–23 'The Wall'",
+    "timeText": "~Mile 21\u201323 'The Wall'",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
@@ -137,7 +170,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "finish", "the-mall"],
+    "tags": [
+      "race-psychology",
+      "finish",
+      "the-mall"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -145,7 +182,7 @@
   },
   {
     "id": "b010",
-    "text": "The first 5km from Greenwich Park is predominantly downhill. This is a trap. Your legs feel fresh and gravity is helping - but every second you bank here will cost you double after mile 20. Start 10–15 seconds per mile slower than goal pace and let the downhill do the work without overstriding.",
+    "text": "The first 5km from Greenwich Park is predominantly downhill. This is a trap. Your legs feel fresh and gravity is helping - but every second you bank here will cost you double after mile 20. Start 10\u201315 seconds per mile slower than goal pace and let the downhill do the work without overstriding.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-course",
     "label": "Failure mode",
@@ -153,7 +190,12 @@
     "confidence": "High",
     "recurrenceCount": 8,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "pacing", "downhill", "greenwich"],
+    "tags": [
+      "race-psychology",
+      "pacing",
+      "downhill",
+      "greenwich"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "failure-modes",
@@ -169,7 +211,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "cutty-sark", "dlr"],
+    "tags": [
+      "best-viewing-zones",
+      "cutty-sark",
+      "dlr"
+    ],
     "timeMinutes": null,
     "timeText": "Arrive by 09:30",
     "section": "spectator-intelligence",
@@ -177,7 +223,7 @@
   },
   {
     "id": "b012",
-    "text": "Tower Bridge (mile 12–13) is spectacular but extremely crowded for spectators. The bridge itself is closed to spectators during the race - you must watch from the approach roads on either side. The south side (Bermondsey) is slightly less packed than the north side (Tower Hill).",
+    "text": "Tower Bridge (mile 12\u201313) is spectacular but extremely crowded for spectators. The bridge itself is closed to spectators during the race - you must watch from the approach roads on either side. The south side (Bermondsey) is slightly less packed than the north side (Tower Hill).",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -185,7 +231,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "tower-bridge", "trap-zones"],
+    "tags": [
+      "best-viewing-zones",
+      "tower-bridge",
+      "trap-zones"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -193,7 +243,7 @@
   },
   {
     "id": "b013",
-    "text": "Canary Wharf (miles 17–19) offers good viewing with more space than central spots. The wide roads around the docklands give better sightlines. Use Canary Wharf Jubilee line station - it's the spectator's secret weapon for quick repositioning to Westminster or London Bridge.",
+    "text": "Canary Wharf (miles 17\u201319) offers good viewing with more space than central spots. The wide roads around the docklands give better sightlines. Use Canary Wharf Jubilee line station - it's the spectator's secret weapon for quick repositioning to Westminster or London Bridge.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -201,7 +251,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "canary-wharf", "jubilee-line"],
+    "tags": [
+      "best-viewing-zones",
+      "canary-wharf",
+      "jubilee-line"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -209,7 +263,7 @@
   },
   {
     "id": "b014",
-    "text": "The Embankment (miles 24–25) near Blackfriars and Temple is where runners need you most. The race is nearly won or lost here - your cheering genuinely makes a difference. Westminster or Embankment tube stations are closest. Arrive early as the area fills fast.",
+    "text": "The Embankment (miles 24\u201325) near Blackfriars and Temple is where runners need you most. The race is nearly won or lost here - your cheering genuinely makes a difference. Westminster or Embankment tube stations are closest. Arrive early as the area fills fast.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -217,7 +271,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "embankment", "late-race"],
+    "tags": [
+      "best-viewing-zones",
+      "embankment",
+      "late-race"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -233,9 +291,13 @@
     "confidence": "High",
     "recurrenceCount": 7,
     "languageOrigin": "EN",
-    "tags": ["trap-zones", "crossing", "underground"],
+    "tags": [
+      "trap-zones",
+      "crossing",
+      "underground"
+    ],
     "timeMinutes": null,
-    "timeText": "No street crossing after ~10:00",
+    "timeText": "No street crossing after ~09:30",
     "section": "spectator-intelligence",
     "subsection": "trap-zones"
   },
@@ -249,7 +311,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["dlr", "jubilee-line", "transit-reliability"],
+    "tags": [
+      "dlr",
+      "jubilee-line",
+      "transit-reliability"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "transit-strategy",
@@ -257,7 +323,7 @@
   },
   {
     "id": "b017",
-    "text": "Three-View Rule: Attempting more than 3 viewing positions consistently fails for spectators. Transit disruptions, course crossing impossibility, and crowd density make a 4th move nearly impossible for runners slower than 3:15. Recommended trio: Cutty Sark (mile 6) → Canary Wharf (mile 18) → Embankment (mile 25).",
+    "text": "Three-View Rule: Attempting more than 3 viewing positions consistently fails for spectators. Transit disruptions, course crossing impossibility, and crowd density make a 4th move nearly impossible for runners slower than 3:15. Recommended trio: Cutty Sark (mile 6) \u2192 Canary Wharf (mile 18) \u2192 Embankment (mile 25).",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -265,7 +331,10 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["three-view-rule", "viewing-strategy"],
+    "tags": [
+      "three-view-rule",
+      "viewing-strategy"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -273,7 +342,7 @@
   },
   {
     "id": "b018",
-    "text": "Post-finish, runners exit the chute on The Mall, collect their medal, heat sheet, and goodie bag, then proceed to Horse Guards Parade for the reunion area. The walk from finish line to meeting points takes 20–45 minutes due to channelled exit paths, medal collection, and congestion.",
+    "text": "Post-finish, runners exit the chute on The Mall, collect their medal, heat sheet, and goodie bag, then proceed to Horse Guards Parade for the reunion area. The walk from finish line to meeting points takes 20\u201345 minutes due to channelled exit paths, medal collection, and congestion.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -281,15 +350,19 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["finish-blueprint", "reunion-strategy", "timed-reality"],
+    "tags": [
+      "finish-blueprint",
+      "reunion-strategy",
+      "timed-reality"
+    ],
     "timeMinutes": 45,
-    "timeText": "Finish → meeting point: 20–45 min",
+    "timeText": "Finish \u2192 meeting point: 20\u201345 min",
     "section": "finish-blueprint",
     "subsection": "timed-reality"
   },
   {
     "id": "b019",
-    "text": "Reunion without a pre-agreed plan averages 45–90 minutes. Mobile signal near the finish is severely degraded due to 50,000+ spectators around The Mall. Designate a meeting letter zone (A–Z) at Horse Guards Parade as primary and Victoria Station food court as backup.",
+    "text": "Reunion without a pre-agreed plan averages 45\u201390 minutes. Mobile signal near the finish is severely degraded due to 50,000+ spectators around The Mall. Designate a meeting letter zone (A\u2013Z) at Horse Guards Parade as primary and Victoria Station food court as backup.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -297,9 +370,13 @@
     "confidence": "High",
     "recurrenceCount": 8,
     "languageOrigin": "EN",
-    "tags": ["reunion-strategy", "finish-blueprint", "cell-service"],
+    "tags": [
+      "reunion-strategy",
+      "finish-blueprint",
+      "cell-service"
+    ],
     "timeMinutes": 90,
-    "timeText": "Reunion without plan: 45–90 min",
+    "timeText": "Reunion without plan: 45\u201390 min",
     "section": "finish-blueprint",
     "subsection": "reunion-strategy"
   },
@@ -313,9 +390,13 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["surface-disruptions", "buses", "transit"],
+    "tags": [
+      "surface-disruptions",
+      "buses",
+      "transit"
+    ],
     "timeMinutes": null,
-    "timeText": "Buses suspended ~06:00–18:00",
+    "timeText": "Buses suspended ~06:00\u201318:00",
     "section": "transit-strategy",
     "subsection": "surface-disruptions"
   },
@@ -329,7 +410,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "transit", "greenwich"],
+    "tags": [
+      "start-line-logistics",
+      "transit",
+      "greenwich"
+    ],
     "timeMinutes": 90,
     "timeText": "Allow 90 min from central London",
     "section": "transit-strategy",
@@ -337,7 +422,7 @@
   },
   {
     "id": "b022",
-    "text": "Greenwich is ideal for runners wanting a stress-free race morning - walk to the start. London Bridge/Borough and Canary Wharf are also excellent, both within 15–20 minutes by DLR or train. Westminster puts you near the finish but requires a longer journey to Greenwich.",
+    "text": "Greenwich is ideal for runners wanting a stress-free race morning - walk to the start. London Bridge/Borough and Canary Wharf are also excellent, both within 15\u201320 minutes by DLR or train. Westminster puts you near the finish but requires a longer journey to Greenwich.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Lodging strategy",
@@ -345,7 +430,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["lodging", "greenwich", "london-bridge"],
+    "tags": [
+      "lodging",
+      "greenwich",
+      "london-bridge"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "lodging",
@@ -353,7 +442,7 @@
   },
   {
     "id": "b023",
-    "text": "The assembly area in Greenwich Park opens around 07:00 for a 10:00 mass start. There are portaloos (long queues - go early and go often), charity village tents, and warm-up areas. Bring a bin bag to sit on as the grass is often damp. The atmosphere is nervous but electric.",
+    "text": "The assembly area in Greenwich Park opens around 07:00 for a 09:30 mass start. There are portaloos (long queues - go early and go often), charity village tents, and warm-up areas. Bring a bin bag to sit on as the grass is often damp. The atmosphere is nervous but electric.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -361,9 +450,13 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["athletes-village", "assembly-area", "toilet-strategy"],
+    "tags": [
+      "athletes-village",
+      "assembly-area",
+      "toilet-strategy"
+    ],
     "timeMinutes": 180,
-    "timeText": "Assembly opens 07:00, 3 hrs before start",
+    "timeText": "Assembly opens 07:00, ~2.5 hrs before start",
     "section": "runner-intelligence",
     "subsection": "athletes-village"
   },
@@ -377,7 +470,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["viewing-strategy", "tracking", "communication"],
+    "tags": [
+      "viewing-strategy",
+      "tracking",
+      "communication"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -393,7 +490,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "finish", "the-mall"],
+    "tags": [
+      "race-psychology",
+      "finish",
+      "the-mall"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -401,7 +502,7 @@
   },
   {
     "id": "b026",
-    "text": "Security screening at Greenwich Park entrance creates a bottleneck between 07:30–09:00. Bag checks are thorough. No large rucksacks permitted - use the official clear bag only. Experienced runners arrive by 07:30 to clear security before the rush.",
+    "text": "Security screening at Greenwich Park entrance creates a bottleneck between 07:30\u201309:00. Bag checks are thorough. No large rucksacks permitted - use the official clear bag only. Experienced runners arrive by 07:30 to clear security before the rush.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Security reality",
@@ -409,15 +510,18 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["security-entry-chokepoints", "start-line-logistics"],
+    "tags": [
+      "security-entry-chokepoints",
+      "start-line-logistics"
+    ],
     "timeMinutes": 30,
-    "timeText": "Security bottleneck 07:30–09:00",
+    "timeText": "Security bottleneck 07:30\u201309:00",
     "section": "runner-intelligence",
     "subsection": "security-entry-chokepoints"
   },
   {
     "id": "b027",
-    "text": "Portaloo queues in Greenwich Park peak between 08:00–09:15. Veterans arrive by 07:30 and use the toilets immediately. By 08:30, waits of 20–30 minutes are common. Some runners use cafe toilets in Greenwich town before entering the park.",
+    "text": "Portaloo queues in Greenwich Park peak between 08:00\u201309:15. Veterans arrive by 07:30 and use the toilets immediately. By 08:30, waits of 20\u201330 minutes are common. Some runners use cafe toilets in Greenwich town before entering the park.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Runner tactic",
@@ -425,15 +529,18 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["toilet-strategy", "athletes-village"],
+    "tags": [
+      "toilet-strategy",
+      "athletes-village"
+    ],
     "timeMinutes": 30,
-    "timeText": "Toilet wait: 20–30 min by 08:30",
+    "timeText": "Toilet wait: 20\u201330 min by 08:30",
     "section": "runner-intelligence",
     "subsection": "toilet-strategy"
   },
   {
     "id": "b028",
-    "text": "The walk from Greenwich Park assembly area to your start pen takes 10–20 minutes depending on your wave. You will be called to move to the start pens approximately 30–45 minutes before your wave. Do NOT leave the portaloo queue too late - missing your wave means starting at the back.",
+    "text": "The walk from Greenwich Park assembly area to your start pen takes 10\u201320 minutes depending on your wave. You will be called to move to the start pens approximately 30\u201345 minutes before your wave. Do NOT leave the portaloo queue too late - missing your wave means starting at the back.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -441,9 +548,12 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "corral-compression"],
+    "tags": [
+      "start-line-logistics",
+      "corral-compression"
+    ],
     "timeMinutes": 20,
-    "timeText": "Assembly → start pen: 10–20 min",
+    "timeText": "Assembly \u2192 start pen: 10\u201320 min",
     "section": "runner-intelligence",
     "subsection": "start-line-logistics"
   },
@@ -457,7 +567,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["aid-station-behavior", "hydration", "crowd-management"],
+    "tags": [
+      "aid-station-behavior",
+      "hydration",
+      "crowd-management"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -473,7 +587,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "pacing", "pace-groups"],
+    "tags": [
+      "race-psychology",
+      "pacing",
+      "pace-groups"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -481,7 +599,7 @@
   },
   {
     "id": "b031",
-    "text": "Deptford and Rotherhithe (miles 4–8 and 8–11) have some of the best local crowd support. Families set up music, barbecues, and hand out sweets. These communities treat marathon day as a local festival. Don't skip these sections as a spectator - the vibe is amazing and far less crowded than Tower Bridge.",
+    "text": "Deptford and Rotherhithe (miles 4\u20138 and 8\u201311) have some of the best local crowd support. Families set up music, barbecues, and hand out sweets. These communities treat marathon day as a local festival. Don't skip these sections as a spectator - the vibe is amazing and far less crowded than Tower Bridge.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -489,7 +607,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "crowd-hotspots", "deptford"],
+    "tags": [
+      "best-viewing-zones",
+      "crowd-hotspots",
+      "deptford"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -497,7 +619,7 @@
   },
   {
     "id": "b032",
-    "text": "The Isle of Dogs loop (miles 14–21) is mentally the toughest section. You run out along the north side of the docks, loop around, and run back along the south side - seeing runners ahead and behind you at the same time. Break this into three chunks: miles 14–16 (Limehouse), 16–18 (Canary Wharf), 18–21 (return). Celebrate each chunk.",
+    "text": "The Isle of Dogs loop (miles 14\u201321) is mentally the toughest section. You run out along the north side of the docks, loop around, and run back along the south side - seeing runners ahead and behind you at the same time. Break this into three chunks: miles 14\u201316 (Limehouse), 16\u201318 (Canary Wharf), 18\u201321 (return). Celebrate each chunk.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-course",
     "label": "Runner tactic",
@@ -505,9 +627,13 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "isle-of-dogs", "mental-strategy"],
+    "tags": [
+      "race-psychology",
+      "isle-of-dogs",
+      "mental-strategy"
+    ],
     "timeMinutes": null,
-    "timeText": "Miles 14–21 mental challenge",
+    "timeText": "Miles 14\u201321 mental challenge",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
@@ -521,7 +647,11 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["gear-discard-warmth", "preparation", "anti-chafe"],
+    "tags": [
+      "gear-discard-warmth",
+      "preparation",
+      "anti-chafe"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -537,7 +667,11 @@
     "confidence": "High",
     "recurrenceCount": 8,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "crowd-support", "preparation"],
+    "tags": [
+      "race-psychology",
+      "crowd-support",
+      "preparation"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -553,7 +687,11 @@
     "confidence": "High",
     "recurrenceCount": 7,
     "languageOrigin": "EN",
-    "tags": ["trap-zones", "wrong-side-trap", "tower-bridge"],
+    "tags": [
+      "trap-zones",
+      "wrong-side-trap",
+      "tower-bridge"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -569,7 +707,10 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["underground-reliability", "jubilee-line"],
+    "tags": [
+      "underground-reliability",
+      "jubilee-line"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "transit-strategy",
@@ -585,7 +726,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["stations-to-avoid", "bank-station", "wrong-side-trap"],
+    "tags": [
+      "stations-to-avoid",
+      "bank-station",
+      "wrong-side-trap"
+    ],
     "timeMinutes": 10,
     "timeText": "Allow 10 extra min at Bank",
     "section": "transit-strategy",
@@ -601,9 +746,13 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["late-arrival", "cascade-failure", "start-line-logistics"],
+    "tags": [
+      "late-arrival",
+      "cascade-failure",
+      "start-line-logistics"
+    ],
     "timeMinutes": null,
-    "timeText": "After 09:00 → cascade failure risk",
+    "timeText": "After 09:00 \u2192 cascade failure risk",
     "section": "failure-modes",
     "subsection": "late-arrival"
   },
@@ -617,7 +766,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["finish-blueprint", "timed-reality", "heat-sheet"],
+    "tags": [
+      "finish-blueprint",
+      "timed-reality",
+      "heat-sheet"
+    ],
     "timeMinutes": 5,
     "timeText": "Body temp drops within ~5 min of stopping",
     "section": "finish-blueprint",
@@ -625,7 +778,7 @@
   },
   {
     "id": "b040",
-    "text": "Medal engraving is available at the finish area for a fee. Queue times are typically 20–40 minutes during peak finish hours (12:00–15:00). Many runners skip this and order engraving online later through the official London Marathon shop.",
+    "text": "Medal engraving is available at the finish area for a fee. Queue times are typically 20\u201340 minutes during peak finish hours (12:00\u201315:00). Many runners skip this and order engraving online later through the official London Marathon shop.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Runner tactic",
@@ -633,15 +786,19 @@
     "confidence": "Med",
     "recurrenceCount": 2,
     "languageOrigin": "EN",
-    "tags": ["finish-blueprint", "timed-reality", "medal"],
+    "tags": [
+      "finish-blueprint",
+      "timed-reality",
+      "medal"
+    ],
     "timeMinutes": 40,
-    "timeText": "Engraving queue: 20–40 min peak",
+    "timeText": "Engraving queue: 20\u201340 min peak",
     "section": "finish-blueprint",
     "subsection": "timed-reality"
   },
   {
     "id": "b041",
-    "text": "The London Marathon Expo at the ExCeL Centre (usually Thursday–Saturday before race day) is where you collect your race number, timing chip, and official bag. You MUST attend in person with photo ID - no one else can collect for you. Go on Thursday or Friday morning to avoid Saturday crowds.",
+    "text": "The London Marathon Expo at the ExCeL Centre (usually Thursday\u2013Saturday before race day) is where you collect your race number, timing chip, and official bag. You MUST attend in person with photo ID - no one else can collect for you. Go on Thursday or Friday morning to avoid Saturday crowds.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/the-expo",
     "label": "Runner tactic",
@@ -649,7 +806,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "expo", "preparation"],
+    "tags": [
+      "start-line-logistics",
+      "expo",
+      "preparation"
+    ],
     "timeMinutes": null,
     "timeText": "Thu/Fri recommended for expo",
     "section": "runner-intelligence",
@@ -657,7 +818,7 @@
   },
   {
     "id": "b042",
-    "text": "Charity runners make up a huge proportion of the London Marathon field - over £1 billion raised since 1981. Many charity tents are in Greenwich Park with supporters. If you're running for charity, your tent is a warm, friendly base. Use it for toilets and shelter before the start.",
+    "text": "Charity runners make up a huge proportion of the London Marathon field - over \u00a31 billion raised since 1981. Many charity tents are in Greenwich Park with supporters. If you're running for charity, your tent is a warm, friendly base. Use it for toilets and shelter before the start.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Runner tactic",
@@ -665,7 +826,11 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["athletes-village", "charity", "preparation"],
+    "tags": [
+      "athletes-village",
+      "charity",
+      "preparation"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -673,7 +838,7 @@
   },
   {
     "id": "b043",
-    "text": "Do NOT wear brand new shoes on race day. Your race shoes should have at least 30–50 miles on them. The London Marathon course includes road camber, cobblestones (Tower Bridge), metal grates, and potentially wet surfaces - you need shoes your feet already trust.",
+    "text": "Do NOT wear brand new shoes on race day. Your race shoes should have at least 30\u201350 miles on them. The London Marathon course includes road camber, cobblestones (Tower Bridge), metal grates, and potentially wet surfaces - you need shoes your feet already trust.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Runner tactic",
@@ -681,7 +846,11 @@
     "confidence": "High",
     "recurrenceCount": 7,
     "languageOrigin": "EN",
-    "tags": ["gear-discard-warmth", "preparation", "shoes"],
+    "tags": [
+      "gear-discard-warmth",
+      "preparation",
+      "shoes"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -689,7 +858,7 @@
   },
   {
     "id": "b044",
-    "text": "The crowds along the entire 26.2 miles are what make London special - an estimated 500,000+ spectators line the course. There are very few 'dead zones'. Even The Highway (miles 21–23), the quietest stretch, still has consistent support. London runners consistently say the crowd carries them through the final miles.",
+    "text": "The crowds along the entire 26.2 miles are what make London special - an estimated 800,000 spectators line the course. There are very few 'dead zones'. Even The Highway (miles 21\u201323), the quietest stretch, still has consistent support. London runners consistently say the crowd carries them through the final miles.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com",
     "label": "Runner tactic",
@@ -697,9 +866,12 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "crowd-support"],
+    "tags": [
+      "race-psychology",
+      "crowd-support"
+    ],
     "timeMinutes": null,
-    "timeText": "500,000+ spectators",
+    "timeText": "800,000 spectators",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
@@ -713,7 +885,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["best-viewing-zones", "the-mall", "finish"],
+    "tags": [
+      "best-viewing-zones",
+      "the-mall",
+      "finish"
+    ],
     "timeMinutes": 60,
     "timeText": "Arrive 60+ min before expected finish",
     "section": "spectator-intelligence",
@@ -729,7 +905,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "preparation", "checklist"],
+    "tags": [
+      "start-line-logistics",
+      "preparation",
+      "checklist"
+    ],
     "timeMinutes": null,
     "timeText": "Night before race",
     "section": "runner-intelligence",
@@ -737,7 +917,7 @@
   },
   {
     "id": "b047",
-    "text": "London Bridge station exits: if heading to the south side (Bermondsey/Tower Bridge south approach), use the Tooley Street exit. For the north side (Tower Hill/Monument), take the Northern or Jubilee line to Bank/Monument. Getting this wrong wastes 15–20 minutes navigating road closures.",
+    "text": "London Bridge station exits: if heading to the south side (Bermondsey/Tower Bridge south approach), use the Tooley Street exit. For the north side (Tower Hill/Monument), take the Northern or Jubilee line to Bank/Monument. Getting this wrong wastes 15\u201320 minutes navigating road closures.",
     "sourceName": "Transport for London",
     "sourceUrl": "https://tfl.gov.uk",
     "label": "Transit strategy",
@@ -745,9 +925,13 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["stations-to-avoid", "london-bridge", "exit-selection"],
+    "tags": [
+      "stations-to-avoid",
+      "london-bridge",
+      "exit-selection"
+    ],
     "timeMinutes": 20,
-    "timeText": "Wrong exit wastes 15–20 min",
+    "timeText": "Wrong exit wastes 15\u201320 min",
     "section": "transit-strategy",
     "subsection": "stations-to-avoid"
   },
@@ -761,7 +945,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["viewing-strategy", "signs", "support"],
+    "tags": [
+      "viewing-strategy",
+      "signs",
+      "support"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -777,7 +965,11 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["finish-blueprint", "nutrition", "recovery"],
+    "tags": [
+      "finish-blueprint",
+      "nutrition",
+      "recovery"
+    ],
     "timeMinutes": 30,
     "timeText": "Eat within 30 min of finishing",
     "section": "finish-blueprint",
@@ -793,7 +985,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "course-profile", "elevation"],
+    "tags": [
+      "race-psychology",
+      "course-profile",
+      "elevation"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -801,7 +997,7 @@
   },
   {
     "id": "b051",
-    "text": "Your GPS watch will lose accuracy in the Canary Wharf section (miles 17–19) due to tall buildings blocking satellite signals. Pace readings will spike wildly - showing 4:00/mile then 12:00/mile. Switch your watch to LAP PACE instead of current pace, which averages out the noise. Better yet, run by effort and breathing, not your watch, through this section.",
+    "text": "Your GPS watch will lose accuracy in the Canary Wharf section (miles 17\u201319) due to tall buildings blocking satellite signals. Pace readings will spike wildly - showing 4:00/mile then 12:00/mile. Switch your watch to LAP PACE instead of current pace, which averages out the noise. Better yet, run by effort and breathing, not your watch, through this section.",
     "sourceName": "Coach Magazine - Garmin Watch London Marathon Tips",
     "sourceUrl": "https://www.coachweb.com/sport/running/ive-run-the-london-marathon-six-timeshere-are-four-ways-to-set-up-your-garmin-watch-for-a-better-race",
     "label": "Runner tactic",
@@ -809,15 +1005,20 @@
     "confidence": "High",
     "recurrenceCount": 7,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "canary-wharf", "gps", "pacing"],
+    "tags": [
+      "race-psychology",
+      "canary-wharf",
+      "gps",
+      "pacing"
+    ],
     "timeMinutes": null,
-    "timeText": "Miles 17–19 GPS unreliable",
+    "timeText": "Miles 17\u201319 GPS unreliable",
     "section": "runner-intelligence",
     "subsection": "race-psychology"
   },
   {
     "id": "b052",
-    "text": "There is a thin blue line painted on the road surface marking the official measured shortest route (the tangents). Following this line means running exactly 26.2 miles. It may be too crowded to follow in the first half, but after mile 16 when the field spreads out, sticking to the blue line can save you 200–400m over the final 10 miles.",
+    "text": "There is a thin blue line painted on the road surface marking the official measured shortest route (the tangents). Following this line means running exactly 26.2 miles. It may be too crowded to follow in the first half, but after mile 16 when the field spreads out, sticking to the blue line can save you 200\u2013400m over the final 10 miles.",
     "sourceName": "RunReady - London Marathon Course Guide",
     "sourceUrl": "https://runready.substack.com/p/the-2025-london-marathon-course-guide",
     "label": "Runner tactic",
@@ -825,7 +1026,12 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "pacing", "blue-line", "tangents"],
+    "tags": [
+      "race-psychology",
+      "pacing",
+      "blue-line",
+      "tangents"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -841,7 +1047,12 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "transit", "dlr", "cutty-sark"],
+    "tags": [
+      "start-line-logistics",
+      "transit",
+      "dlr",
+      "cutty-sark"
+    ],
     "timeMinutes": null,
     "timeText": "Cutty Sark DLR = EXIT ONLY race morning",
     "section": "transit-strategy",
@@ -857,7 +1068,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["transit", "free-travel", "start-line-logistics"],
+    "tags": [
+      "transit",
+      "free-travel",
+      "start-line-logistics"
+    ],
     "timeMinutes": null,
     "timeText": "Free travel until 18:30 with bib",
     "section": "transit-strategy",
@@ -873,7 +1088,11 @@
     "confidence": "High",
     "recurrenceCount": 7,
     "languageOrigin": "EN",
-    "tags": ["gear-discard-warmth", "clothing", "overdressing"],
+    "tags": [
+      "gear-discard-warmth",
+      "clothing",
+      "overdressing"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -889,7 +1108,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["toilet-strategy", "start-line-logistics", "greenwich"],
+    "tags": [
+      "toilet-strategy",
+      "start-line-logistics",
+      "greenwich"
+    ],
     "timeMinutes": null,
     "timeText": "Walk deeper into park for shorter queues",
     "section": "runner-intelligence",
@@ -905,7 +1128,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "corral-compression", "pacing"],
+    "tags": [
+      "start-line-logistics",
+      "corral-compression",
+      "pacing"
+    ],
     "timeMinutes": null,
     "timeText": "Starts merge ~mile 2.8",
     "section": "runner-intelligence",
@@ -913,7 +1140,7 @@
   },
   {
     "id": "b058",
-    "text": "Break the race into 5K chunks mentally, not 26.2 miles. Focus only on the next 3.1 miles at a time. Each 5K segment has a different character: 0–5K (downhill start), 5–10K (Cutty Sark energy), 10–15K (Tower Bridge high), 15–20K (Canary Wharf grind), 20–25K (The Highway test), 25–finish (crowd carries you home).",
+    "text": "Break the race into 5K chunks mentally, not 26.2 miles. Focus only on the next 3.1 miles at a time. Each 5K segment has a different character: 0\u20135K (downhill start), 5\u201310K (Cutty Sark energy), 10\u201315K (Tower Bridge high), 15\u201320K (Canary Wharf grind), 20\u201325K (The Highway test), 25\u2013finish (crowd carries you home).",
     "sourceName": "Running and the City - Course Strategy",
     "sourceUrl": "https://runningandthecity.com/2023/04/15/london-marathon-course-strategy-and-protips/",
     "label": "Runner tactic",
@@ -921,7 +1148,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "mental-strategy", "5k-chunks"],
+    "tags": [
+      "race-psychology",
+      "mental-strategy",
+      "5k-chunks"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -937,7 +1168,11 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["viewing-strategy", "accessible", "wheelchair"],
+    "tags": [
+      "viewing-strategy",
+      "accessible",
+      "wheelchair"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "spectator-intelligence",
@@ -945,7 +1180,7 @@
   },
   {
     "id": "b060",
-    "text": "The Isle of Dogs loop (miles 14–21) lets spectators see runners TWICE from the same spot without moving. Position yourself on the A1261 (Aspen Way) overpass or near Westferry Road and you can see runners going out (mile 15–16) and coming back (mile 19–20). This is the laziest and most effective spectating hack.",
+    "text": "The Isle of Dogs loop (miles 14\u201321) lets spectators see runners TWICE from the same spot without moving. Position yourself on the A1261 (Aspen Way) overpass or near Westferry Road and you can see runners going out (mile 15\u201316) and coming back (mile 19\u201320). This is the laziest and most effective spectating hack.",
     "sourceName": "London Marathon Community",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/spectator-information",
     "label": "Spectator tactic",
@@ -953,7 +1188,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["viewing-strategy", "isle-of-dogs", "double-view"],
+    "tags": [
+      "viewing-strategy",
+      "isle-of-dogs",
+      "double-view"
+    ],
     "timeMinutes": null,
     "timeText": "See runners twice from one spot",
     "section": "spectator-intelligence",
@@ -961,7 +1200,7 @@
   },
   {
     "id": "b061",
-    "text": "The meeting area at Horse Guards Parade is organised alphabetically by runner surname - find the letter matching your runner's last name initial. Agree on this IN ADVANCE and write it on your arm. Runners take 15–30 minutes to walk from finish line to Horse Guards. Do not expect them immediately after the app shows they finished.",
+    "text": "The meeting area at Horse Guards Parade is organised alphabetically by runner surname - find the letter matching your runner's last name initial. Agree on this IN ADVANCE and write it on your arm. Runners take 15\u201330 minutes to walk from finish line to Horse Guards. Do not expect them immediately after the app shows they finished.",
     "sourceName": "London Marathon Spectator Guide / Community Reports",
     "sourceUrl": "https://www.londonmarathonevents.co.uk/london-marathon/london-marathon-spectator-guide",
     "label": "Spectator tactic",
@@ -969,9 +1208,13 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["reunion-strategy", "finish-blueprint", "horse-guards"],
+    "tags": [
+      "reunion-strategy",
+      "finish-blueprint",
+      "horse-guards"
+    ],
     "timeMinutes": 30,
-    "timeText": "Finish → Horse Guards: 15–30 min",
+    "timeText": "Finish \u2192 Horse Guards: 15\u201330 min",
     "section": "finish-blueprint",
     "subsection": "reunion-strategy"
   },
@@ -985,7 +1228,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["reunion-strategy", "transit", "finish-blueprint"],
+    "tags": [
+      "reunion-strategy",
+      "transit",
+      "finish-blueprint"
+    ],
     "timeMinutes": null,
     "timeText": "St James's Park tube = best for reunion",
     "section": "transit-strategy",
@@ -1001,7 +1248,12 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["transit", "start-line-logistics", "river-bus", "greenwich"],
+    "tags": [
+      "transit",
+      "start-line-logistics",
+      "river-bus",
+      "greenwich"
+    ],
     "timeMinutes": null,
     "timeText": "River bus every 20 min to Greenwich",
     "section": "transit-strategy",
@@ -1017,7 +1269,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["transit", "start-line-logistics", "train-delays"],
+    "tags": [
+      "transit",
+      "start-line-logistics",
+      "train-delays"
+    ],
     "timeMinutes": 90,
     "timeText": "Up to 90-min train waits race morning",
     "section": "transit-strategy",
@@ -1033,7 +1289,12 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["transit", "start-line-logistics", "southeastern", "london-bridge"],
+    "tags": [
+      "transit",
+      "start-line-logistics",
+      "southeastern",
+      "london-bridge"
+    ],
     "timeMinutes": null,
     "timeText": "Trains every 10 min from London Bridge",
     "section": "transit-strategy",
@@ -1041,7 +1302,7 @@
   },
   {
     "id": "b066",
-    "text": "Each start colour has a different nearest station: BLUE start → Blackheath station, GREEN start → Maze Hill station, RED start → Greenwich station. Using the wrong station adds a 15–20 minute walk through the park. Check your start colour on your race number and plan accordingly.",
+    "text": "Each start colour has a different nearest station: BLUE start \u2192 Blackheath station, GREEN start \u2192 Maze Hill station, RED start \u2192 Greenwich station. Using the wrong station adds a 15\u201320 minute walk through the park. Check your start colour on your race number and plan accordingly.",
     "sourceName": "TCS London Marathon / JustGiving Guide",
     "sourceUrl": "https://www.justgiving.com/articles/how-to-get-to-the-london-marathon-start",
     "label": "Runner tactic",
@@ -1049,7 +1310,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["start-line-logistics", "transit", "start-colours"],
+    "tags": [
+      "start-line-logistics",
+      "transit",
+      "start-colours"
+    ],
     "timeMinutes": null,
     "timeText": "Blue=Blackheath, Green=Maze Hill, Red=Greenwich",
     "section": "runner-intelligence",
@@ -1065,7 +1330,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "course-profile", "rotherhithe"],
+    "tags": [
+      "race-psychology",
+      "course-profile",
+      "rotherhithe"
+    ],
     "timeMinutes": null,
     "timeText": "~Mile 9 short hill",
     "section": "runner-intelligence",
@@ -1081,7 +1350,12 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "embankment", "finish", "big-ben"],
+    "tags": [
+      "race-psychology",
+      "embankment",
+      "finish",
+      "big-ben"
+    ],
     "timeMinutes": null,
     "timeText": "Big Ben = less than 1 mile to go",
     "section": "runner-intelligence",
@@ -1097,7 +1371,11 @@
     "confidence": "Med",
     "recurrenceCount": 2,
     "languageOrigin": "EN",
-    "tags": ["finish-blueprint", "restaurants", "post-race"],
+    "tags": [
+      "finish-blueprint",
+      "restaurants",
+      "post-race"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "lodging",
@@ -1105,7 +1383,7 @@
   },
   {
     "id": "b070",
-    "text": "If you bonk or hit the wall (usually miles 18–22), WALK through the next aid station, take on water AND a gel, then start a run/walk pattern: run 4 minutes, walk 1 minute. This is not giving up - it's damage control. Many runners who walk strategically still finish under their target time because walking prevents a complete collapse.",
+    "text": "If you bonk or hit the wall (usually miles 18\u201322), WALK through the next aid station, take on water AND a gel, then start a run/walk pattern: run 4 minutes, walk 1 minute. This is not giving up - it's damage control. Many runners who walk strategically still finish under their target time because walking prevents a complete collapse.",
     "sourceName": "The Running Channel - Ultimate London Marathon Guide",
     "sourceUrl": "https://therunningchannel.com/ultimate-guide-running-london-marathon/",
     "label": "Runner tactic",
@@ -1113,7 +1391,12 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["race-psychology", "wall", "walk-run", "fuelling"],
+    "tags": [
+      "race-psychology",
+      "wall",
+      "walk-run",
+      "fuelling"
+    ],
     "timeMinutes": null,
     "timeText": "Walk/run = damage control, not giving up",
     "section": "runner-intelligence",
@@ -1129,7 +1412,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "assembly-area"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "assembly-area"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -1145,7 +1432,12 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "transit", "maze-hill"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "transit",
+      "maze-hill"
+    ],
     "timeMinutes": 15,
     "timeText": "Maze Hill or Blackheath: 10-15 min walk",
     "section": "runner-intelligence",
@@ -1161,7 +1453,12 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["green-start", "baggage-buses", "gear-discard-warmth", "start-line-logistics"],
+    "tags": [
+      "green-start",
+      "baggage-buses",
+      "gear-discard-warmth",
+      "start-line-logistics"
+    ],
     "timeMinutes": 45,
     "timeText": "Bag drop closes 45 min before wave",
     "section": "runner-intelligence",
@@ -1177,7 +1474,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["green-start", "toilet-strategy", "start-line-logistics"],
+    "tags": [
+      "green-start",
+      "toilet-strategy",
+      "start-line-logistics"
+    ],
     "timeMinutes": null,
     "timeText": "Peequal urinals = shorter queues",
     "section": "runner-intelligence",
@@ -1185,7 +1486,7 @@
   },
   {
     "id": "b075",
-    "text": "Green start waves begin at 09:50 (first wave) through to 11:30 (final wave). Check your race number for your exact wave and pen letter. Gates close 30 minutes before each wave, so if your wave is 10:15, you need to be in your pen by 09:45 at the latest.",
+    "text": "Mass waves from 09:30 onward. Check your race number for your exact wave and pen letter. Gates close 30 minutes before each wave, so if your wave is 10:00, you need to be in your pen by 09:30 at the latest.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -1193,9 +1494,13 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "corral-compression"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "corral-compression"
+    ],
     "timeMinutes": null,
-    "timeText": "Green waves: 09:50-11:30",
+    "timeText": "Mass waves from 09:30",
     "section": "runner-intelligence",
     "subsection": "corral-compression"
   },
@@ -1209,7 +1514,12 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "corral-compression", "pacing"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "corral-compression",
+      "pacing"
+    ],
     "timeMinutes": null,
     "timeText": "Starts merge at mile 2.8-3",
     "section": "runner-intelligence",
@@ -1225,7 +1535,11 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["green-start", "gear-discard-warmth", "clothing"],
+    "tags": [
+      "green-start",
+      "gear-discard-warmth",
+      "clothing"
+    ],
     "timeMinutes": null,
     "timeText": "1-2 hour wait in assembly area",
     "section": "runner-intelligence",
@@ -1241,7 +1555,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["green-start", "athletes-village", "charity"],
+    "tags": [
+      "green-start",
+      "athletes-village",
+      "charity"
+    ],
     "timeMinutes": null,
     "timeText": "Charity tents have their own toilets",
     "section": "runner-intelligence",
@@ -1257,7 +1575,12 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "transit", "timeline"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "transit",
+      "timeline"
+    ],
     "timeMinutes": 90,
     "timeText": "Budget 90 min from arrival to pen",
     "section": "runner-intelligence",
@@ -1273,7 +1596,12 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["green-start", "aid-station-behavior", "gear-discard-warmth", "nutrition"],
+    "tags": [
+      "green-start",
+      "aid-station-behavior",
+      "gear-discard-warmth",
+      "nutrition"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -1289,7 +1617,12 @@
     "confidence": "High",
     "recurrenceCount": 6,
     "languageOrigin": "EN",
-    "tags": ["green-start", "race-psychology", "pacing", "downhill"],
+    "tags": [
+      "green-start",
+      "race-psychology",
+      "pacing",
+      "downhill"
+    ],
     "timeMinutes": null,
     "timeText": "Green start: fast downhill miles 1-2",
     "section": "runner-intelligence",
@@ -1305,7 +1638,11 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["green-start", "start-line-logistics", "gear-discard-warmth"],
+    "tags": [
+      "green-start",
+      "start-line-logistics",
+      "gear-discard-warmth"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -1321,7 +1658,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "start-line-logistics", "assembly-area"],
+    "tags": [
+      "blue-start",
+      "start-line-logistics",
+      "assembly-area"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -1337,7 +1678,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "race-psychology", "pacing"],
+    "tags": [
+      "blue-start",
+      "race-psychology",
+      "pacing"
+    ],
     "timeMinutes": null,
     "timeText": "Blue start mile 1: flat, settle your pace",
     "section": "runner-intelligence",
@@ -1353,7 +1698,12 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "race-psychology", "pacing", "downhill"],
+    "tags": [
+      "blue-start",
+      "race-psychology",
+      "pacing",
+      "downhill"
+    ],
     "timeMinutes": null,
     "timeText": "Blue start: descent begins mile 2.3",
     "section": "runner-intelligence",
@@ -1369,7 +1719,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "start-line-logistics", "corral-compression"],
+    "tags": [
+      "blue-start",
+      "start-line-logistics",
+      "corral-compression"
+    ],
     "timeMinutes": null,
     "timeText": "Blue+Red merge at mile 2.8",
     "section": "runner-intelligence",
@@ -1377,7 +1731,7 @@
   },
   {
     "id": "b087",
-    "text": "Blue start waves begin at 09:35 and run through to 11:30. Mass start waves typically go from 09:50 onward. Check your race number for your exact wave letter. Drop your bag early - the baggage trucks for Blue start are in the Blackheath assembly area and close 45 minutes before your wave.",
+    "text": "Mass waves from 09:30. Check your race number for your exact wave letter. Drop your bag early - the baggage trucks for Blue start are in the Blackheath assembly area and close 45 minutes before your wave.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -1385,9 +1739,14 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "start-line-logistics", "corral-compression", "baggage-buses"],
+    "tags": [
+      "blue-start",
+      "start-line-logistics",
+      "corral-compression",
+      "baggage-buses"
+    ],
     "timeMinutes": null,
-    "timeText": "Blue waves from 09:35",
+    "timeText": "Mass waves from 09:30",
     "section": "runner-intelligence",
     "subsection": "corral-compression"
   },
@@ -1401,7 +1760,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "gear-discard-warmth", "clothing"],
+    "tags": [
+      "blue-start",
+      "gear-discard-warmth",
+      "clothing"
+    ],
     "timeMinutes": null,
     "timeText": "Blackheath: colder and windier than forecast",
     "section": "runner-intelligence",
@@ -1417,7 +1780,10 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["blue-start", "toilet-strategy"],
+    "tags": [
+      "blue-start",
+      "toilet-strategy"
+    ],
     "timeMinutes": null,
     "timeText": "Pen portaloos = shorter queues",
     "section": "runner-intelligence",
@@ -1433,7 +1799,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["red-start", "start-line-logistics", "assembly-area"],
+    "tags": [
+      "red-start",
+      "start-line-logistics",
+      "assembly-area"
+    ],
     "timeMinutes": null,
     "timeText": null,
     "section": "runner-intelligence",
@@ -1449,7 +1819,11 @@
     "confidence": "Med",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["red-start", "start-line-logistics", "transit"],
+    "tags": [
+      "red-start",
+      "start-line-logistics",
+      "transit"
+    ],
     "timeMinutes": 15,
     "timeText": "Greenwich or Blackheath: 10-15 min walk",
     "section": "runner-intelligence",
@@ -1465,7 +1839,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["red-start", "race-psychology", "pacing"],
+    "tags": [
+      "red-start",
+      "race-psychology",
+      "pacing"
+    ],
     "timeMinutes": null,
     "timeText": "Red start: GFA runners go out fast, run YOUR pace",
     "section": "runner-intelligence",
@@ -1481,7 +1859,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["red-start", "corral-compression", "start-line-logistics"],
+    "tags": [
+      "red-start",
+      "corral-compression",
+      "start-line-logistics"
+    ],
     "timeMinutes": null,
     "timeText": "All starts merge by mile 3",
     "section": "runner-intelligence",
@@ -1489,7 +1871,7 @@
   },
   {
     "id": "b094",
-    "text": "Red start elite waves: elite women start at 08:40, elite men at 09:00. If you're in a GFA or championship wave, you'll start earlier than the mass waves (09:35 onward). This means fewer crowds in the first few miles but you'll be caught by faster mass-start runners later. Enjoy the space early on.",
+    "text": "Red start elite waves: elite women start at ~09:00, elite men + mass at ~09:30. If you're in a GFA or championship wave, you'll start earlier than the mass waves (09:30 onward). This means fewer crowds in the first few miles but you'll be caught by faster mass-start runners later. Enjoy the space early on.",
     "sourceName": "TCS London Marathon",
     "sourceUrl": "https://www.tcslondonmarathon.com/the-event/race-day-information",
     "label": "Runner tactic",
@@ -1497,9 +1879,13 @@
     "confidence": "High",
     "recurrenceCount": 3,
     "languageOrigin": "EN",
-    "tags": ["red-start", "corral-compression", "start-line-logistics"],
+    "tags": [
+      "red-start",
+      "corral-compression",
+      "start-line-logistics"
+    ],
     "timeMinutes": null,
-    "timeText": "Elite women 08:40, elite men 09:00, mass 09:35+",
+    "timeText": "Elite women ~09:00, elite men + mass ~09:30",
     "section": "runner-intelligence",
     "subsection": "corral-compression"
   },
@@ -1513,7 +1899,11 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["red-start", "race-psychology", "pacing"],
+    "tags": [
+      "red-start",
+      "race-psychology",
+      "pacing"
+    ],
     "timeMinutes": null,
     "timeText": "GFA: your qualifying time is your ceiling, not your floor",
     "section": "runner-intelligence",
@@ -1529,7 +1919,11 @@
     "confidence": "High",
     "recurrenceCount": 5,
     "languageOrigin": "EN",
-    "tags": ["red-start", "gear-discard-warmth", "clothing"],
+    "tags": [
+      "red-start",
+      "gear-discard-warmth",
+      "clothing"
+    ],
     "timeMinutes": null,
     "timeText": "Greenwich Park: some shelter but start line exposed",
     "section": "runner-intelligence",
@@ -1545,7 +1939,10 @@
     "confidence": "High",
     "recurrenceCount": 4,
     "languageOrigin": "EN",
-    "tags": ["red-start", "toilet-strategy"],
+    "tags": [
+      "red-start",
+      "toilet-strategy"
+    ],
     "timeMinutes": null,
     "timeText": "Charity tents often have own toilets",
     "section": "runner-intelligence",

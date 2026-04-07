@@ -50,7 +50,7 @@ export default function Overview({ onNavigate }: Props) {
         </h1>
 
         <p className="hero-stagger-3 text-base sm:text-lg text-[var(--text-secondary)] max-w-xl leading-relaxed mb-8">
-          70+ community-verified tips covering start logistics, viewing strategy, transit, course crossings, and reunion planning. Everything you actually need on race day.
+          95+ community-verified tips covering start logistics, viewing strategy, transit, course crossings, and reunion planning. Everything you actually need on race day.
         </p>
 
         <div className="hero-stagger-4 flex flex-col sm:flex-row gap-3">

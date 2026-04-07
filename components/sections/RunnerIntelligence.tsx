@@ -20,22 +20,22 @@ const SUBSECTIONS = [
   { id: 'security-entry-chokepoints', label: 'Security / Entry', icon: Shield, desc: 'Bag checks, prohibited items, gate closure 30 min before wave start.' },
   { id: 'toilet-strategy', label: 'Toilet Strategy', icon: Bath, desc: 'Go early, go often. Queues grow exponentially after 08:30.' },
   { id: 'gear-discard-warmth', label: 'Gear / Baggage / Kit', icon: Package, desc: 'Official clear bag, disposable layers, anti-chafe, shoes, weather prep.' },
-  { id: 'corral-compression', label: 'Start Pen & Wave Timing', icon: Timer, desc: 'Mass start at 10:00, starts merge at mile 2.8, gates close 30 min before wave.' },
+  { id: 'corral-compression', label: 'Start Pen & Wave Timing', icon: Timer, desc: 'Mass start at 09:30, starts merge at mile 2.8, gates close 30 min before wave.' },
   { id: 'aid-station-behavior', label: 'Aid Station Behavior', icon: Droplets, desc: 'Water every mile, Lucozade Sport from mile 5, gels at miles 14 and 21.' },
   { id: 'race-psychology', label: 'Race Psychology & Course Strategy', icon: Brain, desc: 'Greenwich downhill trap, Cutty Sark surge, Tower Bridge lift, The Highway wall, The Mall finish.' },
 ];
 
 const CHECKLIST = [
-  { time: '06:30', label: 'Leave accommodation for Greenwich', done: false },
-  { time: '07:00-07:30', label: 'Arrive at Greenwich Park assembly area', done: false },
-  { time: '07:30', label: 'First toilet visit (shortest queues)', done: false },
-  { time: '08:00', label: 'Deposit baggage at baggage bus', done: false },
-  { time: '08:15', label: 'Security check -- join queue early', done: false },
-  { time: '08:30', label: 'Second toilet visit', done: false },
-  { time: '09:00', label: 'Final toilet visit, warm-up, layers on', done: false },
-  { time: '09:15-09:30', label: 'Walk to start pen (gates close 30 min before wave)', done: false },
-  { time: '09:45', label: 'In start pen -- final preparation', done: false },
-  { time: '10:00', label: 'GUN TIME -- mass start', done: false },
+  { time: '06:00', label: 'Leave accommodation for Greenwich', done: false },
+  { time: '06:30-07:00', label: 'Arrive at Greenwich Park assembly area', done: false },
+  { time: '07:00', label: 'First toilet visit (shortest queues)', done: false },
+  { time: '07:30', label: 'Deposit baggage at baggage bus', done: false },
+  { time: '07:45', label: 'Security check -- join queue early', done: false },
+  { time: '08:00', label: 'Second toilet visit', done: false },
+  { time: '08:30', label: 'Final toilet visit, warm-up, layers on', done: false },
+  { time: '08:45-09:00', label: 'Walk to start pen (gates close 30 min before wave)', done: false },
+  { time: '09:15', label: 'In start pen -- final preparation', done: false },
+  { time: '09:30', label: 'GUN TIME -- mass start', done: false },
 ];
 
 export default function RunnerIntelligence() {

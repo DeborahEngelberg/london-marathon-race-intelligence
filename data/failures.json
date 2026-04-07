@@ -38,7 +38,7 @@
     "description": "The assembly area in Greenwich Park is a 15-25 minute walk from the nearest stations (Blackheath, Maze Hill, or Greenwich). Combined with security checks, bag drop queues, and portaloo queues, arriving less than 90 minutes before your wave start creates panic. Some runners have missed their start wave entirely.",
     "severity": "critical",
     "audience": "runner",
-    "prevention": "Arrive at Greenwich Park no later than 7:30am for a 10:00am start. If staying outside Greenwich, add 60-90 minutes for transit from central London. Set multiple alarms. Have your race number, timing chip, and bag ready the night before.",
+    "prevention": "Arrive at Greenwich Park no later than 7:30am for a 09:30 start. If staying outside Greenwich, add 60-90 minutes for transit from central London. Set multiple alarms. Have your race number, timing chip, and bag ready the night before.",
     "recovery": "If running late, skip the bag drop (wear disposable layers you can discard). Go directly to your colour-coded start pen. Contact marshals if you miss your wave - late starters may be accommodated but with significant time penalty.",
     "frequency": "common",
     "tags": ["start", "greenwich", "time-management", "logistics"]

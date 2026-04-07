@@ -22,7 +22,7 @@ const INITIAL_SECTIONS: CheckSection[] = [
     title: 'Week before race',
     when: 'Mon-Thu before race Sunday',
     items: [
-      { id: 'w1', label: 'Collect race number at ExCeL Centre Expo', detail: 'Go Thu or Fri to avoid Saturday crowds. Bring photo ID. No one else can collect for you.', done: false },
+      { id: 'w1', label: 'Collect race number at ExCeL London Expo', detail: 'ExCeL London, Custom House station (DLR/Elizabeth line). Wed 22 - Sat 25 April. Go Wed or Thu to avoid queues. Bring photo ID. No one else can collect for you.', done: false },
       { id: 'w2', label: 'Check race number for start colour (Blue/Red/Green)', detail: 'This determines your start area and which station to use on race morning.', done: false },
       { id: 'w3', label: 'Attach timing chip to shoe', detail: 'Follow the instructions on the chip. Test it sits flat and won\'t move during the run.', done: false },
       { id: 'w4', label: 'Plan race morning transport to Greenwich', detail: 'Blue start = Blackheath station. Green start = Maze Hill. Red start = Greenwich. Allow 90 min from central London.', done: false },
@@ -56,7 +56,7 @@ const INITIAL_SECTIONS: CheckSection[] = [
     title: 'Race morning',
     when: 'Sunday, 05:30-07:30',
     items: [
-      { id: 'r1', label: 'Eat breakfast (3 hours before start)', detail: 'For a 10:00 start, eat by 07:00. Stick to what you\'ve practised in training.', done: false },
+      { id: 'r1', label: 'Eat breakfast (3 hours before start)', detail: 'For a 09:30 start, eat by 06:30. Stick to what you\'ve practised in training.', done: false },
       { id: 'r2', label: 'Apply anti-chafe (second coat)', detail: 'Reapply Vaseline/Body Glide everywhere. Better too much than too little.', done: false },
       { id: 'r3', label: 'Put on race outfit + disposable layers on top', detail: 'You\'ll discard the top layers at the start line. Wear them over your race kit.', done: false },
       { id: 'r4', label: 'Double-check: bib pinned, chip on shoe, gels packed', detail: 'Quick visual check before leaving. Forgetting any of these ruins your race.', done: false },
@@ -238,7 +238,7 @@ export default function RaceDayChecklist() {
       </div>
 
       <p className="text-xs text-[var(--text-muted)] mt-8">
-        Based on a 10:00 mass start. Elite waves start earlier. Always check your official race information.
+        Based on a 09:30 mass start (26 April 2026). Elite waves start earlier. Always check your official race information.
       </p>
     </div>
   );

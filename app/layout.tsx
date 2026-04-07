@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'London Marathon Guide',
-  description: 'Runner and Spectator Strategy Guide for the TCS London Marathon. Crossing map, viewing routes, transit strategy, finish blueprint, and common mistakes.',
+  description: 'Runner and Spectator Strategy Guide for the 2026 TCS London Marathon (26 April 2026). Crossing map, viewing routes, transit strategy, finish blueprint, and common mistakes.',
   keywords: ['London Marathon', 'TCS London Marathon', 'marathon spectator guide', 'marathon strategy', 'London running', 'marathon race intelligence'],
 };
 
