@@ -2,15 +2,15 @@
   {
     "id": "c001",
     "name": "Tower Bridge",
-    "description": "The course crosses Tower Bridge at miles 12-13. The bridge is completely closed to pedestrians and vehicles during the race. No surface crossing is possible. Use Tower Hill (District/Circle) or London Bridge (Northern/Jubilee) stations to change sides.",
+    "description": "The course crosses Tower Bridge at the halfway point (miles 12-13). Tower Bridge is open to spectators and is one of the most popular viewing spots. However, you cannot cross the course at street level once it is closed. Use Tower Hill (District/Circle) or London Bridge (Northern/Jubilee) stations to change sides if needed.",
     "lat": 51.5055,
     "lng": -0.0754,
-    "crossingType": "bridge-closed",
-    "difficulty": "impossible",
-    "alternativeRoute": "Use Tower Hill or London Bridge Underground stations",
+    "crossingType": "course-crossing",
+    "difficulty": "no-street-crossing",
+    "alternativeRoute": "Use Tower Hill or London Bridge Underground stations to switch sides",
     "nearestStation": "Tower Hill / London Bridge",
-    "notes": "Iconic course landmark - absolutely no pedestrian access during race hours",
-    "status": "closed"
+    "notes": "Iconic spectator spot. Arrive early. South side (Bermondsey) less crowded than north.",
+    "status": "spectators-welcome"
   },
   {
     "id": "c002",

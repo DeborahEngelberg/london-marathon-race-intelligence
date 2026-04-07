@@ -84,7 +84,7 @@ const ROUTES: ViewingRoute[] = [
         station: 'London Bridge',
         lines: ['Northern', 'Jubilee'],
         exitGuidance: 'Exit via Borough High Street exit, walk east toward Tooley Street and Tower Bridge approach',
-        sideGuidance: 'South (Bermondsey) approach is less crowded than north. Bridge itself is CLOSED.',
+        sideGuidance: 'South (Bermondsey) approach is less crowded than north. Arrive early as Tower Bridge gets extremely busy.',
         kmMarker: 20,
       },
       {

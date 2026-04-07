@@ -12,7 +12,7 @@ import { saveItem, removeItem, isItemSaved } from '@/lib/store';
 
 const SUBSECTIONS = [
   { id: 'best-viewing-zones', label: 'Best Viewing Zones', icon: MapPin, desc: 'Cutty Sark, Tower Bridge approach, Canary Wharf, Embankment, The Mall.' },
-  { id: 'trap-zones', label: 'Trap Zones', icon: AlertTriangle, desc: 'Tower Bridge closed to spectators. Wrong-side trap can waste hours.' },
+  { id: 'trap-zones', label: 'Trap Zones', icon: AlertTriangle, desc: 'Wrong-side traps at key locations can waste hours. Know which side to be on.' },
   { id: 'crowd-hotspots', label: 'Crowd Hotspots', icon: Users, desc: 'Where crowds peak and where to find space for better viewing.' },
   { id: 'viewing-strategy', label: 'Viewing Strategy', icon: Compass, desc: 'Three-View Rule: maximum 3 spots, commit, and move efficiently.' },
   { id: 'three-view-rule', label: 'Three-View Rule', icon: Lightbulb, desc: 'The core spectating principle: 2 spots = comfort, 3 = optimal, 4+ = failure.' },
@@ -32,7 +32,7 @@ const BEST_SPOTS = [
     mile: 'Mile 12',
     station: 'London Bridge (Northern/Jubilee)',
     rating: 'Iconic',
-    tips: 'The bridge itself is CLOSED to spectators. Watch from Bermondsey approach -- less packed than Tower Hill side.',
+    tips: 'One of the most iconic spectator spots on the entire course. Gets extremely busy. Arrive early. South side (Bermondsey) is slightly less packed than north side (Tower Hill).',
     crowd: 'Very High',
   },
   {
@@ -138,28 +138,26 @@ export default function SpectatorIntelligence() {
 
       {/* Tower Bridge Trap Warning */}
       <AnimateIn delay={50}>
-        <div className="mb-8 p-5 rounded-xl border-2 border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
+        <div className="mb-8 p-5 rounded-xl border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
           <div className="flex items-center gap-2 mb-3">
-            <AlertTriangle size={18} className="text-red-500" />
-            <h2 className="text-lg font-bold text-red-700 dark:text-red-400">Wrong-Side Trap Warning: Tower Bridge</h2>
+            <AlertTriangle size={18} className="text-amber-500" />
+            <h2 className="text-lg font-bold text-amber-700 dark:text-amber-400">Tower Bridge: arrive early</h2>
           </div>
-          <p className="text-sm text-red-600 dark:text-red-300 mb-3">
-            Tower Bridge is <strong>completely closed to spectators</strong> during the race. The course crosses the bridge at miles 12-13.
-            If you are on the wrong side of the course when it closes, you cannot cross at street level.
+          <p className="text-sm text-amber-700 dark:text-amber-300 mb-3">
+            Tower Bridge is one of the most iconic and popular spectator spots on the entire course. Runners cross it at approximately the halfway point (~13.1 miles). It gets <strong>extremely busy</strong>, so arrive early to secure a good position.
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
-            <div className="p-3 rounded-lg bg-white/60 dark:bg-red-900/30">
-              <span className="text-xs font-bold text-red-500">THE TRAP</span>
-              <p className="text-xs text-red-600 dark:text-red-300 mt-1">
-                Spectators who try to reach Tower Bridge viewing find the bridge closed and no way to cross.
-                Hours wasted trying to navigate around the course on foot.
+            <div className="p-3 rounded-lg bg-white/60 dark:bg-amber-900/30">
+              <span className="text-xs font-bold text-amber-600">GETTING THERE</span>
+              <p className="text-xs text-amber-700 dark:text-amber-300 mt-1">
+                Nearest stations: London Bridge (Jubilee/Northern) and Tower Hill (Circle/District).
+                The south side (Bermondsey approach) tends to be slightly less packed than the north side.
               </p>
             </div>
-            <div className="p-3 rounded-lg bg-white/60 dark:bg-red-900/30">
-              <span className="text-xs font-bold text-green-600">THE FIX</span>
-              <p className="text-xs text-red-600 dark:text-red-300 mt-1">
-                Watch from the approach roads (south side via London Bridge station is less packed).
-                Or skip Tower Bridge entirely and use your views at Cutty Sark + Canary Wharf + Embankment.
+            <div className="p-3 rounded-lg bg-white/60 dark:bg-amber-900/30">
+              <span className="text-xs font-bold text-amber-600">WRONG-SIDE TIP</span>
+              <p className="text-xs text-amber-700 dark:text-amber-300 mt-1">
+                Once the course is closed, you cannot cross at street level. Decide which side you want to be on before the race starts. Use the Underground to switch sides if needed.
               </p>
             </div>
           </div>

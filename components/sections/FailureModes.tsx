@@ -28,11 +28,11 @@ const FAILURES: FailureMode[] = [
   },
   {
     id: 'fm002',
-    title: 'Trying to watch from Tower Bridge',
+    title: 'Getting stuck on the wrong side at Tower Bridge',
     audience: 'Spectator',
-    whyFails: 'Tower Bridge is completely closed to pedestrians during the race. Spectators who go there find no viewing spot and no way to cross.',
-    veteranFix: 'Watch from the approach roads. South side (via London Bridge station) is less packed.',
-    alternatePlan: 'Use Cutty Sark + Canary Wharf + Embankment as your three views instead.',
+    whyFails: 'Tower Bridge is one of the best spectator spots, but once the course closes you cannot cross at street level. Spectators who end up on the wrong side lose time trying to navigate around.',
+    veteranFix: 'Decide which side you want to be on before the race starts. South side (via London Bridge station) is slightly less packed. Arrive early.',
+    alternatePlan: 'If stuck on the wrong side, use Tower Hill or London Bridge Underground to switch sides.',
   },
   {
     id: 'fm003',
